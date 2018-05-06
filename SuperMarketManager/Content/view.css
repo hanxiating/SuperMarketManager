@@ -1,0 +1,233 @@
+﻿.body{
+
+}
+
+.div{
+    display:inline-block;
+    height:500px;
+    border:double;
+    border-color:azure;
+}
+.table{
+    border: solid black;
+    border-width: 2px 0px 0px 2px;
+    text-align:center;
+}
+.table_cell{
+    border: solid;
+    border-color:black;
+    border-width: 0px 2px 2px 0px;
+    padding-left: 10px;
+    text-align:center;
+}
+.t1 {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    background-color: #FFF;
+    background:#EEF4F9;
+    border:solid;
+    border:1;
+    color:#003755;
+    border-collapse: collapse;
+    font: 14px "宋体";
+}
+
+table.t1 tr {
+        background: #7CB8E2;
+        color: #fff;
+        padding: 6px 4px;
+        text-align: center;
+}
+table.t1 td {
+        background: #C7DDEE none repeat-x scroll center left;
+        color: #000;
+        padding: 4px 2px;
+}
+
+table.t1 a {
+        text-decoration: none;
+        height: 1em;
+}
+
+table.t1 a:link, table.t1 a:visited {
+            color: #3366CC;
+}
+table.t1 a:hover { /* 鼠标经过时 */
+            color: #B50000;
+            text-decoration: underline;
+}  
+
+.title_font{
+    font-size:px;
+    color:black;
+}
+.small_font {
+    height:40px;
+    font-size: 3px;
+    color: black;
+}
+.btn-size{
+    width:110px;
+    height:60px;
+    font-size:16px
+}
+der-font{
+    font-size:20px;
+    font-family:"宋体";
+    text-align:center;
+}
+.text-center {
+    text-align: center;
+}
+.logo { /*logo图标*/
+    width: 200px;
+    margin-bottom: 0;
+}
+.slash {
+    height: 80px;
+    width: 400px;
+    position: relative;
+    top: -5px;
+}
+.webtitle { /*网页大标题图片*/
+    width: 500px;
+    float: right;
+    margin-right: 50px;
+    margin-top: 17px;
+}
+
+.topnav { /*顶部横向导航栏*/
+    overflow: hidden;
+    background-color: #3D3D3D;
+}
+.header{ /*头部*/
+    background-color: #F4F4F4;
+    color: white;
+    margin-top: 20px;
+    text-align: left;
+    width: 100%;
+    padding: 5px;
+    display: block;
+}
+.header_image{
+    height:100px;
+    width:200px;
+}
+.nav{
+    
+}
+.nav ul {
+    width: 980px;
+    margin: 0px;
+    height: 38px;
+    padding: 0;
+}
+
+    .nav ul li {
+        float: left;
+    }
+
+        .nav ul li a {
+            width: 130px;
+            height: 28px;
+            line-height: 28px;
+            color:#ffffff;
+            margin: 5px 10px;
+            font-size: 15px;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+        }
+
+            .nav ul li a:hover {
+                width: 130px;
+                height: 26px;
+                font-size: 18px;
+                line-height: 28px;
+                color:#ffffff;
+                background: black;
+            }
+
+.nav_2 {
+}
+
+    .nav_2 ul {
+        width: 980px;
+        margin: 0px;
+        height: 38px;
+        padding: 0;
+    }
+
+        .nav_2 ul li {
+            float: left;
+        }
+
+            .nav_2 ul li a {
+                width: 130px;
+                height: 28px;
+                line-height: 28px;
+                color: #ffffff;
+                margin: 5px 10px;
+                font-size: 25px;
+                display: block;
+                text-align: center;
+                text-decoration: none;
+            }
+
+                .nav_2 ul li a:hover {
+                    width: 130px;
+                    height: 26px;
+                    font-size: 25px;
+                    line-height: 28px;
+                    color: #ffffff;
+                    background: black;
+                }
+
+.market-font{
+    margin-top:50px;
+    margin-left:25px;
+    font-size:30px;
+}
+.market-title {
+    height: 75px;
+    background-color:#ffffff;
+}
+
+.asp-table{
+    margin-left:70px;
+
+}
+.asp-table-header {
+    height: 30px;
+    font-size: 16px;
+    background-color:aliceblue;
+}
+.asp-table-normal{
+    font-size:12px;
+    height:30px;
+}
+.btn_update {
+    margin-left:600px;
+    height: 30px;
+    width: 50px;
+}
+.btn_delete {
+    margin-left: 10px;
+    height: 30px;
+    width: 50px;
+}
+.btn_search{
+
+}
+.left_menu{
+    font-size:40px;
+    background-color:lightgray;
+}
+.supply_label {
+    font-size: 14px;
+}
+.back{
+    text-align:right;
+}

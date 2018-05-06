@@ -131,7 +131,17 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\home_layout.css" />
+    <Content Include="Content\css\messages_layout.css" />
+    <Content Include="Content\css\myorders_layout.css" />
+    <Content Include="Content\css\myorders__layout.css" />
+    <Content Include="Content\css\page1_layout.css" />
+    <Content Include="Content\css\page2_layout.css" />
+    <Content Include="Content\css\page3_layout.css" />
+    <Content Include="Content\css\page5_layout.css" />
+    <Content Include="Content\css\releaseorder_layout.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\view.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -143,6 +153,34 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="mmk_media\image\2.jpg" />
+    <Content Include="mmk_media\image\arrow_down.png" />
+    <Content Include="mmk_media\image\bg.jpg" />
+    <Content Include="mmk_media\image\bg.png" />
+    <Content Include="mmk_media\image\logo_big_gray.png" />
+    <Content Include="mmk_media\image\logo_big_green.png" />
+    <Content Include="mmk_media\image\logo_big_touming.png" />
+    <Content Include="mmk_media\image\logo_small_gray.png" />
+    <Content Include="mmk_media\image\market_1.png" />
+    <Content Include="mmk_media\image\market_2.png" />
+    <Content Include="mmk_media\image\market_3.png" />
+    <Content Include="mmk_media\image\message.png" />
+    <Content Include="mmk_media\image\more_unfold.png" />
+    <Content Include="mmk_media\image\pain.jpg" />
+    <Content Include="mmk_media\image\personalcenter.png" />
+    <Content Include="mmk_media\image\point.jpg" />
+    <Content Include="mmk_media\image\poster1.jpg" />
+    <Content Include="mmk_media\image\poster2.jpg" />
+    <Content Include="mmk_media\image\poster3.jpg" />
+    <Content Include="mmk_media\image\search_black.png" />
+    <Content Include="mmk_media\image\search_white.png" />
+    <Content Include="mmk_media\image\slash.PNG" />
+    <Content Include="mmk_media\image\supermarket.png" />
+    <Content Include="mmk_media\image\title1.png" />
+    <Content Include="mmk_media\image\title2.png" />
+    <Content Include="mmk_media\image\zbfl.png" />
+    <Content Include="mmk_media\image\zbfr.png" />
+    <Content Include="mmk_media\image\test.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -173,6 +211,11 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="View\Employee.aspx" />
+    <Content Include="View\Sale.aspx" />
+    <Content Include="View\Store.aspx" />
+    <Content Include="View\Supply.aspx" />
+    <Content Include="View\test_1.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -214,15 +257,52 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Employee.aspx.cs">
+      <DependentUpon>Employee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Employee.aspx.designer.cs">
+      <DependentUpon>Employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Sale.aspx.cs">
+      <DependentUpon>Sale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Sale.aspx.designer.cs">
+      <DependentUpon>Sale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Store.aspx.cs">
+      <DependentUpon>Store.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Store.aspx.designer.cs">
+      <DependentUpon>Store.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Supply.aspx.cs">
+      <DependentUpon>Supply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Supply.aspx.designer.cs">
+      <DependentUpon>Supply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\test_1.aspx.cs">
+      <DependentUpon>test_1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\test_1.aspx.designer.cs">
+      <DependentUpon>test_1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
