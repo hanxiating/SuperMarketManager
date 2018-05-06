@@ -11,8 +11,9 @@ namespace SuperMarketManager.Service
     {
         private const String SELECT_SUPPLIERS_BY_GOODSID = "select * from goods_supplier where goods_id={0}";
         private const String INSERT_GOODS_SUPPLIER_SQL = "insert into goods_supplier(goods_id,supplier_id,price) values({0},{1},{2})";
-
-        //根据货物id查询供应商信息
+        private const String SELECT_SUPPLIERS_BY_ID = "select * from goods_supplier where id={0}";
+        
+        //根据goods_id查询供应商信息
         public List<GoodsSupplier> GetGoodsSuppliers(int goods_id)
         {
             List<Dictionary<String, Object>> sqlResult = DatabaseTool.ExecSqlWithReturn(String.Format(SELECT_SUPPLIERS_BY_GOODSID, goods_id));
@@ -35,6 +36,20 @@ namespace SuperMarketManager.Service
         public bool AddPart(int goods_id, int supplier_id, float price)
         {
             return DatabaseTool.ExecSql(String.Format(INSERT_GOODS_SUPPLIER_SQL, goods_id, supplier_id, price));
+        }
+
+        //根据id查询查询供应商信息
+        public GoodsSupplier GetGoodsSupplierById(int id)
+        {
+            List<Dictionary<String, Object>> sqlResult = DatabaseTool.ExecSqlWithReturn(String.Format(SELECT_SUPPLIERS_BY_ID, id));
+            if (null == sqlResult || sqlResult.Count < 1)
+            {
+                return null;
+            }
+            else
+            {
+                return GoodsSupplier.CreateGoodsSupplier(sqlResult[0]);
+            }
         }
     }
 }
