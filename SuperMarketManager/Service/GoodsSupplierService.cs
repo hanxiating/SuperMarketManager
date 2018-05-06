@@ -15,7 +15,7 @@ namespace SuperMarketManager.Service
         //根据货物id查询供应商信息
         public List<GoodsSupplier> GetGoodsSuppliers(int goods_id)
         {
-            List<Dictionary<String, Object>> sqlResult = DatabaseTool.ExecSqlWithReturn(String.Format(SELECT_SUPPLIERS_BY_GOODSID,goods_id));
+            List<Dictionary<String, Object>> sqlResult = DatabaseTool.ExecSqlWithReturn(String.Format(SELECT_SUPPLIERS_BY_GOODSID, goods_id));
             if (null == sqlResult || sqlResult.Count < 1)
             {
                 return null;
@@ -34,7 +34,7 @@ namespace SuperMarketManager.Service
         //添加货物—供应商
         public bool AddPart(int goods_id, int supplier_id, float price)
         {
-            return DatabaseTool.ExecSql(String.Format(INSERT_GOODS_SUPPLIER_SQL, goods_id,supplier_id,price));
+            return DatabaseTool.ExecSql(String.Format(INSERT_GOODS_SUPPLIER_SQL, goods_id, supplier_id, price));
         }
     }
 }
