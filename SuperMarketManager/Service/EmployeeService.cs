@@ -55,6 +55,5 @@ namespace SuperMarketManager.Service
             }
         }
 
-
     }
 }
