@@ -26,7 +26,6 @@ namespace SuperMarketManager.Service
 
             return employees;
         }
-
-        private Employee 
+        
     }
 }

@@ -11,5 +11,15 @@ namespace SuperMarketManager.Model
         public int GoodsId { set; get; }
         public int SupplierId { set; get; }
         public float Price { set; get; }
+    
+        public static GoodsSupplier CreateGoodsSupplier(Dictionary<String, Object> dic)
+        {
+            GoodsSupplier goodsSupplier = new GoodsSupplier();
+            goodsSupplier.Id = (int)dic["id"];
+            goodsSupplier.GoodsId = (int)dic["goods_id"];
+            goodsSupplier.SupplierId = (int)dic["supplier_id"];
+            goodsSupplier.Price = (int)dic["price"];
+            return goodsSupplier;
+        }
     }
 }

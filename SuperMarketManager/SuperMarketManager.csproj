@@ -238,7 +238,9 @@
     <Compile Include="Model\Supplier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\EmployeeService.cs" />
+    <Compile Include="Service\GoodsSupplierService.cs" />
     <Compile Include="Service\PartService.cs" />
+    <Compile Include="Service\SupplierService.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
