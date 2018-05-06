@@ -50,7 +50,5 @@ namespace SuperMarketManager.Service
                 return parts;
             }
         }
-
-
     }
 }
