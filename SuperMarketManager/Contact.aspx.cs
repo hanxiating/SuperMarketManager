@@ -1,9 +1,12 @@
-﻿using System;
+﻿using SuperMarketManager.Database;
+using SuperMarketManager.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
 
 namespace SuperMarketManager
 {
@@ -11,7 +14,7 @@ namespace SuperMarketManager
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //DatabaseTool.ExecSql("insert into part(name) values(\"测试\")");
         }
     }
 }
