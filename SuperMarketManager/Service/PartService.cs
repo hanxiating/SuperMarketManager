@@ -31,7 +31,7 @@ namespace SuperMarketManager.Service
             }
             else
             {
-                return CreatePart(sqlResult[0]);
+                return Part.CreatePart(sqlResult[0]);
             }
         }
         public List<Part> GetAllPart()
@@ -45,18 +45,12 @@ namespace SuperMarketManager.Service
             {
                 List<Part> parts = new List<Part>();
                 foreach (Dictionary<String,Object> dic in sqlResult) {
-                    parts.Add(CreatePart(dic));
+                    parts.Add(Part.CreatePart(dic));
                 }
                 return parts;
             }
         }
 
-        private Part CreatePart(Dictionary<String, Object> dic)
-        {
-            Part part = new Part();
-            part.Id = (int)dic["id"];
-            part.Name = (String)dic["name"];
-            return part;
-        }
+
     }
 }

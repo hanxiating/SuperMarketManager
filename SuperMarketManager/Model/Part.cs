@@ -9,5 +9,12 @@ namespace SuperMarketManager.Model
     {
         public int Id { get; set; }
         public String Name { get; set; }
+        public static Part CreatePart(Dictionary<String, Object> dic)
+        {
+            Part part = new Part();
+            part.Id = (int)dic["id"];
+            part.Name = (String)dic["name"];
+            return part;
+        }
     }
 }
