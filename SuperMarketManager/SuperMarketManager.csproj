@@ -236,7 +236,17 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\home_layout.css" />
+    <Content Include="Content\css\messages_layout.css" />
+    <Content Include="Content\css\myorders_layout.css" />
+    <Content Include="Content\css\myorders__layout.css" />
+    <Content Include="Content\css\page1_layout.css" />
+    <Content Include="Content\css\page2_layout.css" />
+    <Content Include="Content\css\page3_layout.css" />
+    <Content Include="Content\css\page5_layout.css" />
+    <Content Include="Content\css\releaseorder_layout.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\view.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -263,9 +273,34 @@
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <Content Include="bin\SuperMarketManager.dll.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="obj\Debug\SuperMarketManager.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\SuperMarketManager.dll" />
-    <Content Include="obj\Debug\SuperMarketManager.pdb" />
+    <Content Include="mmk_media\image\2.jpg" />
+    <Content Include="mmk_media\image\arrow_down.png" />
+    <Content Include="mmk_media\image\bg.jpg" />
+    <Content Include="mmk_media\image\bg.png" />
+    <Content Include="mmk_media\image\logo_big_gray.png" />
+    <Content Include="mmk_media\image\logo_big_green.png" />
+    <Content Include="mmk_media\image\logo_big_touming.png" />
+    <Content Include="mmk_media\image\logo_small_gray.png" />
+    <Content Include="mmk_media\image\market_1.png" />
+    <Content Include="mmk_media\image\market_2.png" />
+    <Content Include="mmk_media\image\market_3.png" />
+    <Content Include="mmk_media\image\message.png" />
+    <Content Include="mmk_media\image\more_unfold.png" />
+    <Content Include="mmk_media\image\pain.jpg" />
+    <Content Include="mmk_media\image\personalcenter.png" />
+    <Content Include="mmk_media\image\point.jpg" />
+    <Content Include="mmk_media\image\poster1.jpg" />
+    <Content Include="mmk_media\image\poster2.jpg" />
+    <Content Include="mmk_media\image\poster3.jpg" />
+    <Content Include="mmk_media\image\search_black.png" />
+    <Content Include="mmk_media\image\search_white.png" />
+    <Content Include="mmk_media\image\slash.PNG" />
+    <Content Include="mmk_media\image\supermarket.png" />
+    <Content Include="mmk_media\image\title1.png" />
+    <Content Include="mmk_media\image\title2.png" />
+    <Content Include="mmk_media\image\zbfl.png" />
+    <Content Include="mmk_media\image\zbfr.png" />
+    <Content Include="mmk_media\image\test.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -312,6 +347,11 @@
     <Content Include="View\Dialog_order.aspx" />
     <Content Include="View\Main_Customer.aspx" />
     <Content Include="View\Main_Manager.aspx" />
+    <Content Include="View\Employee.aspx" />
+    <Content Include="View\Sale.aspx" />
+    <Content Include="View\Store.aspx" />
+    <Content Include="View\Supply.aspx" />
+    <Content Include="View\test_1.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -356,6 +396,15 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\EmployeeService.cs" />
+    <Compile Include="Service\GoodsService.cs" />
+    <Compile Include="Service\GoodsSupplierService.cs" />
+    <Compile Include="Service\GoodsTypeService.cs" />
+    <Compile Include="Service\LoginService.cs" />
+    <Compile Include="Service\PartService.cs" />
+    <Compile Include="Service\PurchaseService.cs" />
+    <Compile Include="Service\SalesService.cs" />
+    <Compile Include="Service\SupplierService.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -370,12 +419,48 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="Utils\TimeUtils.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Employee.aspx.cs">
+      <DependentUpon>Employee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Employee.aspx.designer.cs">
+      <DependentUpon>Employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Sale.aspx.cs">
+      <DependentUpon>Sale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Sale.aspx.designer.cs">
+      <DependentUpon>Sale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Store.aspx.cs">
+      <DependentUpon>Store.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Store.aspx.designer.cs">
+      <DependentUpon>Store.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Supply.aspx.cs">
+      <DependentUpon>Supply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Supply.aspx.designer.cs">
+      <DependentUpon>Supply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\test_1.aspx.cs">
+      <DependentUpon>test_1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\test_1.aspx.designer.cs">
+      <DependentUpon>test_1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

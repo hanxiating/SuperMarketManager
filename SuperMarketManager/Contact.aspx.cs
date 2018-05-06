@@ -14,8 +14,7 @@ namespace SuperMarketManager
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Goods goods = new Goods();
-            
+            //DatabaseTool.ExecSql("insert into part(name) values(\"测试\")");
         }
     }
 }

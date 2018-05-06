@@ -9,8 +9,19 @@ namespace SuperMarketManager.Model
     {
         public int Id { set; get; }
         public int GoodsId { set; get; }
-        public int NUmber { set; get; }
+        public int Number { set; get; }
         public float Cost { set; get; }
         public long Time { set; get; }
+
+        public static Sales CreateSale(Dictionary<String, Object> dic)
+        {
+            Sales sales = new Sales();
+            sales.Id = (int)dic["id"];
+            sales.GoodsId = (int)dic["good_id"];
+            sales.Number = (int)dic["number"];
+            sales.Cost = (float)dic["cost"];
+            sales.Time = (long)dic["cost"];
+            return sales;
+        }
     }
 }

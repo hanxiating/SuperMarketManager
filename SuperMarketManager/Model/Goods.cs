@@ -17,5 +17,18 @@ namespace SuperMarketManager.Model
         private int status = 1;
         public int Status { get { return status; } set { status = value; } }
 
+        public static Goods CreateGoods(Dictionary<String, Object> dic)
+        {
+            Goods goods = new Goods();
+            goods.Id = (int)dic["id"];
+            goods.Name = (String)dic["name"];
+            goods.Type = (int)dic["type"];
+            goods.Number = (int)dic["number"];
+            goods.Price = (float)dic["price"];
+            goods.Discount = (float)dic["discount"];
+            goods.LimitNumber = (int)dic["limit_number"];
+            goods.Status = (int)dic["status"];
+            return goods;
+        }
     }
 }
