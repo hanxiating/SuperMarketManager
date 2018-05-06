@@ -240,6 +240,7 @@
     <Compile Include="Service\EmployeeService.cs" />
     <Compile Include="Service\GoodsService.cs" />
     <Compile Include="Service\GoodsTypeService.cs" />
+    <Compile Include="Service\LoginService.cs" />
     <Compile Include="Service\PartService.cs" />
     <Compile Include="Service\PurchaseService.cs" />
     <Compile Include="Service\SalesService.cs" />
