@@ -12,5 +12,14 @@ namespace SuperMarketManager.Model
         public int Number { set; get; }
         public long Time { get; set; }
 
+        public static Purchase CreatePurchase(Dictionary<String, Object> dic)
+        {
+            Purchase purchase = new Purchase();
+            purchase.Id = (int)dic["id"];
+            purchase.GoodsSupplierId = (int)dic["goods_supplier_id"];
+            purchase.Number = (int)dic["number"];
+            purchase.Time = (long)dic["number"];
+            return purchase;
+        }
     }
 }
