@@ -35,7 +35,14 @@ namespace SuperMarketManager.Service
         public bool AddSales(int goods_id,int number,float cost)
         {
             long time = TimeUtils.GetCurrentTimeUnix();
-            return DatabaseTool.ExecSql(String.Format(INSERT_SALES_SQL, goods_id,number,cost,time));
+            if (new GoodsService().SaleGoods(goods_id, number)) {
+                return DatabaseTool.ExecSql(String.Format(INSERT_SALES_SQL, goods_id, number, cost, time));
+            }
+            else
+            {
+                return false;
+            }
+            
         }
     }
 }
