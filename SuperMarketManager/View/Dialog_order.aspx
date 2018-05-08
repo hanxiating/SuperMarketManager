@@ -1,6 +1,14 @@
 ﻿<%@ Page Language="C#" %>
 
 <!DOCTYPE html>
+<script runat="server">
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Response.Write("订单提交成功！");
+    }
+</script>
+
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta charset="utf-8" />
@@ -55,7 +63,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:Button ID="Button1" runat="server" Text="确认" />
+                    <asp:Button ID="Button1" runat="server" Text="确认" OnClick="Button1_Click" />
                     <asp:Button ID="Button2" runat="server" Text="取消" />
                 </td>
                 

@@ -33,23 +33,23 @@
                             <td class="auto-style1">
                                 <table class="auto-style3">
                                     <tr>
-                                        <td style="height:50px">&nbsp;员工管理</td>
+                                        <td style="height:50px"align="center">员工管理</td>
                                        
                                     </tr>
                                       <tr>
-                                        <td  style="height:50px">&nbsp; 供应商管理</td>
+                                        <td  style="height:50px" align="center">供应商管理</td>
                                        
                                     </tr>
                                        <tr>
-                                        <td  style="height:50px">&nbsp;库存管理</td>
+                                        <td  style="height:50px" align="center">库存管理</td>
                                        
                                     </tr>
                                       <tr>
-                                        <td  style="height:50px">&nbsp;&nbsp; 销售记录</td>
+                                        <td  style="height:50px" align="center">销售记录</td>
                                        
                                     </tr>
                                       <tr>
-                                        <td  style="height:50px">&nbsp; 退出</td>
+                                        <td  style="height:50px" align="center"> 退出</td>
                                        
                                     </tr>
                                 </table>

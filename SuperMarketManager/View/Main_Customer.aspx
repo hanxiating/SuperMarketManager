@@ -1,6 +1,16 @@
 ﻿<%@ Page Language="C#" %>
 
 <!DOCTYPE html>
+<script runat="server">
+
+    protected void Button19_Click(object sender, EventArgs e)
+    {
+
+    }
+</script>
+
+
+
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta charset="utf-8" />
@@ -35,11 +45,6 @@
         .auto-style10 {
             height: 106px;
         }
-        .auto-style11 {
-            width: 208px;
-            height: 98px;
-            margin-top: 0px;
-        }
         .auto-style12 {
             height: 106px;
             width: 208px;
@@ -47,13 +52,54 @@
         .auto-style13 {
             width: 208px;
         }
+
+  
+        .auto-style14 {
+            width: 173px;
+        }
+        .auto-style15 {
+            width: 79%;
+            height: 129px;
+            margin-top: 0px;
+        }
+        .auto-style16 {
+            width: 70%;
+        }
+        .auto-style17 {
+            width: 98%;
+            height: 142px;
+        }
+        .auto-style18 {
+            width: 81%;
+            height: 129px;
+            margin-top: 0px;
+        }
+
+  
+        .auto-style19 {
+            width: 72%;
+            height: 129px;
+            margin-top: 0px;
+        }
+
+  
+        .auto-style20 {
+            width: 77%;
+            height: 129px;
+            margin-top: 0px;
+        }
+
+  
     </style>
 </head>
 <body>
     <form id="form1" runat="server">   
         <table style="width:100%;">
             <tr>
-                <td ><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;欢迎来到XXX超市</h1></td>
+                <td >
+                    <h1 align="left">
+
+                     <asp:Image runat="server" ImageUrl="~/Source/others/图片2.png" Height="108px" Width="580px"/></td></h1></td>
                 
             </tr>
             <tr>
@@ -63,31 +109,31 @@
                             <td class="auto-style2">
                                 <table class="auto-style1">
                                     <tr>
-                                        <td style="height:50px">&nbsp;&nbsp; HOT！</td>
+                                        <td style="height:50px"align="center">HOT！</td>
                                        
                                     </tr>
                                      <tr>
-                                        <td style="height:50px">&nbsp;&nbsp; 食品</td>
+                                        <td style="height:50px"align="center">食品</td>
                                        
                                     </tr>
                                      <tr>
-                                        <td style="height:50px">&nbsp;&nbsp; 水果</td>
+                                        <td style="height:50px"align="center"> 水果</td>
                                        
                                     </tr>
                                      <tr>
-                                        <td style="height:50px">&nbsp;&nbsp;日用品</td>
+                                        <td style="height:50px"align="center">日用品</td>
                                        
                                     </tr>
                                      <tr>
-                                        <td style="height:50px">&nbsp;&nbsp; 饮料</td>
+                                        <td style="height:50px"align="center">饮料</td>
                                        
                                     </tr>
                                      <tr>
-                                        <td style="height:50px">&nbsp;&nbsp; 文具</td>
+                                        <td style="height:50px"align="center"> 文具</td>
                                        
                                     </tr>
                                      <tr>
-                                        <td style="height:50px">&nbsp;&nbsp; 其他</td>
+                                        <td style="height:50px"align="center"> 其他</td>
                                        
                                     </tr>
                                 </table>
@@ -96,33 +142,36 @@
                                 <table class="auto-style3">
                                     <tr>
                                         <td class="auto-style6">
-                                            <table class="auto-style5">
+                                            <table class="auto-style17">
                                                 <tr>
-                                                    <td class="auto-style8">
+                                                    <td class="auto-style14">
                                                         <table class="auto-style9">
                                                             <tr>
                                                                 <td class="auto-style10">
-                                                                    <img alt="" class="auto-style11" src="" /></td>
+                                                                    <asp:Image runat="server" ImageUrl="~/Source/fruit/banana.jpg" Height="91px" Width="113px"/>
+                                                                    </td>
+
                                                                
                                                             </tr>
                                                             <tr>
-                                                                <td>&nbsp;名称：香蕉 单价：35.2元/斤</td>
+                                                                <td>名称：香蕉 <br />
+                                                                    单价：35.2元/斤</td>
                                                                
                                                             </tr>
                                                             
                                                         </table>
                                                     </td>
                                                     <td>
-                                                        <table style="width:100%;">
+                                                        <table class="auto-style16">
                                                             <tr>
                                                                 <td>
-                                                                    <asp:Button ID="Button1" runat="server" Text="+" />
+                                                                    <asp:Button ID="banana_add" runat="server" Text="+" />
                                                                 </td>
                                                                
                                                             </tr>
                                                             <tr>
                                                                 <td>
-                                                                    <asp:Button ID="Button2" runat="server" Text="-" />
+                                                                    <asp:Button ID="banana_sub" runat="server" Text="-" />
                                                                 </td>
                                                                 
                                                             </tr>
@@ -138,14 +187,15 @@
                                             <table class="auto-style5">
                                                 <tr>
                                                     <td class="auto-style8">
-                                                        <table class="auto-style9">
+                                                        <table class="auto-style15">
                                                             <tr>
                                                                 <td class="auto-style12">
-                                                                    <img alt="" class="auto-style11" src="" /></td>
+                                                                    <asp:Image runat="server" ImageUrl="~/Source/fruit/liulian.png" Height="91px" Width="129px"/></td>
                                                                
                                                             </tr>
                                                             <tr>
-                                                                <td class="auto-style13">名称：香蕉 单价：35.2元/斤</td>
+                                                                <td class="auto-style13">名称：榴莲 <br />
+                                                                    单价：35.2元/斤</td>
                                                                
                                                             </tr>
                                                             
@@ -155,13 +205,13 @@
                                                         <table style="width:100%;">
                                                             <tr>
                                                                 <td>
-                                                                    <asp:Button ID="Button3" runat="server" Text="+" />
+                                                                    <asp:Button ID="liulian_add" runat="server" Text="+" />
                                                                 </td>
                                                                
                                                             </tr>
                                                             <tr>
                                                                 <td>
-                                                                    <asp:Button ID="Button4" runat="server" Text="-" />
+                                                                    <asp:Button ID="liulian_sub" runat="server" Text="-" />
                                                                 </td>
                                                                 
                                                             </tr>
@@ -177,14 +227,16 @@
                                             <table class="auto-style5">
                                                 <tr>
                                                     <td class="auto-style8">
-                                                        <table class="auto-style9">
+                                                        <table class="auto-style18">
                                                             <tr>
                                                                 <td class="auto-style10">
-                                                                    <img alt="" class="auto-style11" src="" /></td>
+                                                                     <asp:Image runat="server" ImageUrl="~/Source/fruit/apple1.jpg" Height="91px" Width="127px"/></td>
                                                                
                                                             </tr>
                                                             <tr>
-                                                                <td>名称：香蕉 单价：35.2元/斤</td>
+                                                                <td>名称：苹果  
+                                                                    <br />
+                                                                    单价：35.2元/斤</td>
                                                                
                                                             </tr>
                                                             
@@ -194,13 +246,13 @@
                                                         <table style="width:100%;">
                                                             <tr>
                                                                 <td>
-                                                                    <asp:Button ID="Button5" runat="server" Text="+" />
+                                                                    <asp:Button ID="apple_add" runat="server" Text="+" />
                                                                 </td>
                                                                
                                                             </tr>
                                                             <tr>
                                                                 <td>
-                                                                    <asp:Button ID="Button6" runat="server" Text="-" />
+                                                                    <asp:Button ID="apple_sub" runat="server" Text="-" />
                                                                 </td>
                                                                 
                                                             </tr>
@@ -217,15 +269,15 @@
                                         <td class="auto-style6">
                                             <table class="auto-style5">
                                                 <tr>
-                                                    <td class="auto-style8">
-                                                        <table class="auto-style9">
+                                                    <td class="auto-style14">
+                                                        <table class="auto-style19">
                                                             <tr>
                                                                 <td class="auto-style10">
-                                                                    <img alt="" class="auto-style11" src="" /></td>
+                                                                     <asp:Image runat="server" ImageUrl="~/Source/fruit/grape.jpg" Height="91px" Width="113px"/></td>
                                                                
                                                             </tr>
                                                             <tr>
-                                                                <td>名称：香蕉 单价：35.2元/斤</td>
+                                                                <td>名称：葡萄 单价：35.2元/斤</td>
                                                                
                                                             </tr>
                                                             
@@ -235,13 +287,13 @@
                                                         <table style="width:100%;">
                                                             <tr>
                                                                 <td>
-                                                                    <asp:Button ID="Button7" runat="server" Text="+" />
+                                                                    <asp:Button ID="grape_add" runat="server" Text="+" />
                                                                 </td>
                                                                
                                                             </tr>
                                                             <tr>
                                                                 <td>
-                                                                    <asp:Button ID="Button8" runat="server" Text="-" />
+                                                                    <asp:Button ID="grape_sub" runat="server" Text="-" />
                                                                 </td>
                                                                 
                                                             </tr>
@@ -260,11 +312,11 @@
                                                         <table class="auto-style9">
                                                             <tr>
                                                                 <td class="auto-style10">
-                                                                    <img alt="" class="auto-style11" src="" /></td>
+                                                                     <asp:Image runat="server" ImageUrl="~/Source/fruit/mango.jpg" Height="91px" Width="113px"/></td>
                                                                
                                                             </tr>
                                                             <tr>
-                                                                <td>名称：香蕉 单价：35.2元/斤</td>
+                                                                <td>名称：芒果 单价：35.2元/斤</td>
                                                                
                                                             </tr>
                                                             
@@ -299,11 +351,11 @@
                                                         <table class="auto-style9">
                                                             <tr>
                                                                 <td class="auto-style10">
-                                                                    <img alt="" class="auto-style11" src="" /></td>
+                                                                     <asp:Image runat="server" ImageUrl="~/Source/fruit/orange.jpg" Height="91px" Width="113px"/></td>
                                                                
                                                             </tr>
                                                             <tr>
-                                                                <td>名称：香蕉 单价：35.2元/斤</td>
+                                                                <td>名称：香橙 单价：35.2元/斤</td>
                                                                
                                                             </tr>
                                                             
@@ -313,13 +365,13 @@
                                                         <table style="width:100%;">
                                                             <tr>
                                                                 <td>
-                                                                    <asp:Button ID="Button11" runat="server" Text="+" />
+                                                                    <asp:Button ID="orange_add" runat="server" Text="+" />
                                                                 </td>
                                                                
                                                             </tr>
                                                             <tr>
                                                                 <td>
-                                                                    <asp:Button ID="Button12" runat="server" Text="-" />
+                                                                    <asp:Button ID="orange_sub" runat="server" Text="-" />
                                                                 </td>
                                                                 
                                                             </tr>
@@ -336,15 +388,15 @@
                                         <td class="auto-style6">
                                             <table class="auto-style5">
                                                 <tr>
-                                                    <td class="auto-style8">
-                                                        <table class="auto-style9">
+                                                    <td class="auto-style14">
+                                                        <table class="auto-style20">
                                                             <tr>
                                                                 <td class="auto-style10">
-                                                                    <img alt="" class="auto-style11" src="" /></td>
+                                                                     <asp:Image runat="server" ImageUrl="~/Source/fruit/peach1.jpg" Height="91px" Width="114px"/></td>
                                                                
                                                             </tr>
                                                             <tr>
-                                                                <td>名称：香蕉 单价：35.2元/斤</td>
+                                                                <td>名称：桃子 单价：35.2元/斤</td>
                                                                
                                                             </tr>
                                                             
@@ -354,13 +406,13 @@
                                                         <table style="width:100%;">
                                                             <tr>
                                                                 <td>
-                                                                    <asp:Button ID="Button13" runat="server" Text="+" />
+                                                                    <asp:Button ID="peach_add" runat="server" Text="+" />
                                                                 </td>
                                                                
                                                             </tr>
                                                             <tr>
                                                                 <td>
-                                                                    <asp:Button ID="Button14" runat="server" Text="-" />
+                                                                    <asp:Button ID="peach_sub" runat="server" Text="-" />
                                                                 </td>
                                                                 
                                                             </tr>
@@ -379,11 +431,11 @@
                                                         <table class="auto-style9">
                                                             <tr>
                                                                 <td class="auto-style10">
-                                                                    <img alt="" class="auto-style11" src="" /></td>
+                                                                     <asp:Image runat="server" ImageUrl="~/Source/fruit/pineaple.png" Height="91px" Width="113px"/></td>
                                                                
                                                             </tr>
                                                             <tr>
-                                                                <td>名称：香蕉 单价：35.2元/斤</td>
+                                                                <td>名称：菠萝 单价：35.2元/斤</td>
                                                                
                                                             </tr>
                                                             
@@ -393,13 +445,13 @@
                                                         <table style="width:100%;">
                                                             <tr>
                                                                 <td>
-                                                                    <asp:Button ID="Button15" runat="server" Text="+" />
+                                                                    <asp:Button ID="pineapple_add" runat="server" Text="+" />
                                                                 </td>
                                                                
                                                             </tr>
                                                             <tr>
                                                                 <td>
-                                                                    <asp:Button ID="Button16" runat="server" Text="-" />
+                                                                    <asp:Button ID="pineapple_sub" runat="server" Text="-" />
                                                                 </td>
                                                                 
                                                             </tr>
@@ -413,16 +465,16 @@
                                         </td>
                                         <td class="auto-style6">
                                             <table class="auto-style5">
-                                                <tr>
+                                                <tr >
                                                     <td class="auto-style8">
                                                         <table class="auto-style9">
                                                             <tr>
                                                                 <td class="auto-style10">
-                                                                    <img alt="" class="auto-style11" src="" /></td>
+                                                                     <asp:Image runat="server" ImageUrl="~/Source/fruit/strawberrey.jpg" Height="91px" Width="113px"/></td>
                                                                
                                                             </tr>
                                                             <tr>
-                                                                <td>名称：香蕉 单价：35.2元/斤</td>
+                                                                <td>名称：草莓 单价：35.2元/斤</td>
                                                                
                                                             </tr>
                                                             
@@ -432,13 +484,13 @@
                                                         <table style="width:100%;">
                                                             <tr>
                                                                 <td>
-                                                                    <asp:Button ID="Button17" runat="server" Text="+" />
+                                                                    <asp:Button ID="strawberry_add" runat="server" Text="+" />
                                                                 </td>
                                                                
                                                             </tr>
                                                             <tr>
                                                                 <td>
-                                                                    <asp:Button ID="Button18" runat="server" Text="-" />
+                                                                    <asp:Button ID="strawberry_sub" runat="server" Text="-" />
                                                                 </td>
                                                                 
                                                             </tr>
@@ -463,8 +515,8 @@
             </tr>
             <tr style="text-align:right">
                 <td>
-                    <div style="width: 1024px; margin-left: auto; margin-right: auto; background: #eee;">
-                        <asp:Button ID="Button19" runat="server" Text="提交" Height="43px" Width="121px" Font-Size="Medium"/>
+                    <div style=" margin-left: auto; margin-right: auto; background: #eee;">
+                        <asp:Button ID="Button19" runat="server" Text="提交" Height="43px" Width="121px" Font-Size="Medium" OnClick="Button19_Click"  />
                     </div> 
                     
                 </td>
