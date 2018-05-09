@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Employee.aspx.cs" Inherits="SuperMarketManager.View.Employee" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Employee_1.aspx.cs" Inherits="SuperMarketManager.View.Employee" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -41,7 +41,7 @@
                 </div>
                  <ul>
                    <li><a href="Home.aspx">首页</a></li>
-                   <li><a href="Employee.aspx">员工管理</a></li>
+                   <li><a href="Employee_1.aspx">员工管理</a></li>
                    <li><a href="Supply.aspx">供应商管理</a></li>
                    <li><a href="Store.aspx">库存管理</a></li>
                    <li><a href="Sale.aspx">销售记录</a></li>

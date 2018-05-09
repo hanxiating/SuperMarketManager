@@ -348,7 +348,7 @@
     <Content Include="View\login.aspx" />
     <Content Include="View\Main_Customer.aspx" />
     <Content Include="View\Main_Manager.aspx" />
-    <Content Include="View\Employee.aspx" />
+    <Content Include="View\Employee_1.aspx" />
     <Content Include="View\Sale.aspx" />
     <Content Include="View\Store.aspx" />
     <Content Include="View\Supply.aspx" />
@@ -428,12 +428,12 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="View\Employee.aspx.cs">
-      <DependentUpon>Employee.aspx</DependentUpon>
+    <Compile Include="View\Employee_1.aspx.cs">
+      <DependentUpon>Employee_1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="View\Employee.aspx.designer.cs">
-      <DependentUpon>Employee.aspx</DependentUpon>
+    <Compile Include="View\Employee_1.aspx.designer.cs">
+      <DependentUpon>Employee_1.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
