@@ -384,6 +384,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Model\ConstantValue.cs" />
     <Compile Include="Model\Employee.cs" />
     <Compile Include="Model\Goods.cs" />
     <Compile Include="Model\GoodsSupplier.cs" />
