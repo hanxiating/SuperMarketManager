@@ -25,13 +25,18 @@
             border-width:3px;
         }
     </style>
+    <script>
+        function bgChange(obj){
+            obj.bgColor=obj.bgColor==""?"#ffffff":"";
+        }
+    </script>
 
 </head>
 <body class="body">
     <form id="form1" runat="server">
         <div class="nav navbar-inverse navbar-fixed-top">
             <div class="market-title">
-                <asp:Image runat="server" Height="71px" ImageUrl="~/mmk_media/image/market_3.png" Width="493px" />
+                <asp:Image runat="server" Height="71px" ImageUrl="~/Source/market_3.png" Width="493px" />
             </div>
                 <ul>
                     <li><a href="Home.aspx">首页</a></li>
@@ -57,7 +62,7 @@
            
 
             <asp:Table ID="saleInfo" runat="server"  CssClass="auto-style2 asp-table" Height="37px" Width="1024px">
-                <asp:TableHeaderRow CssClass="header-font asp-table-header">
+                <asp:TableHeaderRow CssClass="header-font asp-table-header" >
                     <asp:TableHeaderCell CssClass="table-bordered td text-center ">商品编号</asp:TableHeaderCell>
                     <asp:TableHeaderCell CssClass="table-bordered td text-center">名称</asp:TableHeaderCell>
                     <asp:TableHeaderCell CssClass="table-bordered td text-center">种类</asp:TableHeaderCell>

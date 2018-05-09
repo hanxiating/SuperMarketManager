@@ -51,7 +51,7 @@
         </div>
 
         <div id="menu" style="margin-left:15px;margin-top:75px;border-right:groove;" class="auto-style1">
-            <asp:Button ID="store_food" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="食品"></asp:Button>
+            <asp:Button ID="store_food" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="食品" OnClick="store_food_Click"></asp:Button>
             <asp:Button ID="store_fruit" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="水果"></asp:Button>
             <asp:Button ID="store_daliy" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="日用品"></asp:Button>
             <asp:Button ID="store_drink" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="饮料"></asp:Button>

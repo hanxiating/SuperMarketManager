@@ -283,7 +283,7 @@
     <Content Include="mmk_media\image\logo_small_gray.png" />
     <Content Include="mmk_media\image\market_1.png" />
     <Content Include="mmk_media\image\market_2.png" />
-    <Content Include="mmk_media\image\market_3.png" />
+    <Content Include="Source\market_3.png" />
     <Content Include="mmk_media\image\message.png" />
     <Content Include="mmk_media\image\more_unfold.png" />
     <Content Include="mmk_media\image\pain.jpg" />
@@ -345,6 +345,7 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="View\Dialog_input.aspx" />
     <Content Include="View\Dialog_order.aspx" />
+    <Content Include="View\login.aspx" />
     <Content Include="View\Main_Customer.aspx" />
     <Content Include="View\Main_Manager.aspx" />
     <Content Include="View\Employee.aspx" />
@@ -433,6 +434,13 @@
     </Compile>
     <Compile Include="View\Employee.aspx.designer.cs">
       <DependentUpon>Employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Sale.aspx.cs">
       <DependentUpon>Sale.aspx</DependentUpon>

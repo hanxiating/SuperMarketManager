@@ -37,7 +37,7 @@
         <div >
             <div class="nav navbar-inverse navbar-fixed-top">
                 <div class="market-title">
-                    <asp:Image runat="server" Height="71px" ImageUrl="~/mmk_media/image/market_3.png" Width="493px" />
+                    <asp:Image runat="server" Height="71px" ImageUrl="~Source/market_3.png" Width="493px" />
                 </div>
                  <ul>
                    <li><a href="Home.aspx">首页</a></li>
@@ -51,8 +51,8 @@
         </div>
 
         <div id="menu" style="margin-left:15px;margin-top:75px;border-right:groove;" class="auto-style1">
-            <asp:Button ID="emp_all" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="全体员工"></asp:Button>
-            <asp:Button ID="emp_HR" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="人事部"></asp:Button>
+            <asp:Button ID="emp_all" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="全体员工" OnClick="emp_all_Click"></asp:Button>
+            <asp:Button ID="emp_HR" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="人事部" OnClick="emp_HR_Click"></asp:Button>
             <asp:Button ID="emp_finacial" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="财务部"></asp:Button>
             <asp:Button ID="emp_purches" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="采购部"></asp:Button>
             <asp:Button ID="emp_service" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="客服部"></asp:Button>
@@ -66,9 +66,9 @@
 
                 <asp:Button ID="search_btn" runat="server" style="height:30px;width:50px;font-size:14px;" Text="搜索" />
 
-                <asp:Button ID="emp_add" runat="server" Text="添加" class="btn_update"/>
-                <asp:Button ID="emp_update" runat="server" Text="修改" class="btn_delete"/>
-                <asp:Button ID="emp_delete" runat="server" Text="删除" class="btn_delete"/>
+                <asp:Button ID="emp_add" runat="server" Text="添加员工" class="btn_update"/>
+               <%-- <asp:Button ID="emp_update" runat="server" Text="修改" class="btn_delete"/>
+                <asp:Button ID="emp_delete" runat="server" Text="删除" class="btn_delete"/>--%>
 
             </div><br />
            
@@ -80,6 +80,7 @@
                     <asp:TableHeaderCell CssClass="table-bordered td text-center">性别</asp:TableHeaderCell>
                     <asp:TableHeaderCell CssClass="table-bordered td text-center">联系方式</asp:TableHeaderCell>
                     <asp:TableHeaderCell CssClass="table-bordered td text-center">所在部门</asp:TableHeaderCell>
+                    <asp:TableHeaderCell CssClass="table-bordered td text-center">操作</asp:TableHeaderCell>
                 </asp:TableHeaderRow>
                 <asp:TableRow CssClass="asp-table-normal">
                      <asp:TableCell CssClass="table-bordered td text-center">123456</asp:TableCell>
@@ -87,6 +88,10 @@
                      <asp:TableCell CssClass="table-bordered td text-center">123456</asp:TableCell>
                      <asp:TableCell CssClass="table-bordered td text-center">123456</asp:TableCell>
                      <asp:TableCell CssClass="table-bordered td text-center">123456</asp:TableCell>
+                    <asp:TableCell CssClass="table-bordered td text-center">
+                         <asp:Button ID="emp_update" runat="server" Text="修改"/>
+                         <asp:Button ID="emp_delete" runat="server" style="margin-left:10px" Text="删除"/>
+                    </asp:TableCell>
                 </asp:TableRow>
             </asp:Table>
 
