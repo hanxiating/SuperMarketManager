@@ -19,6 +19,10 @@ namespace SuperMarketManager.Service
 
         private const String GET_WAIT_PURCHASE_GOODS_BY_TYPE = "select goods.*,number/limit_number as weight from goods where type={0} order by weight";
 
+        private const String SEARCH_GOODS_BYNAME = "select * from goods where type={0} and name=\"{1}\"";
+
+        
+
         public bool AddGoods(Goods goods)
         {
             return AddGoods(goods.Name, goods.Type, goods.Number, goods.Price, goods.Discount, goods.LimitNumber, goods.Status);
@@ -74,9 +78,11 @@ namespace SuperMarketManager.Service
             return GetGoodsList(GET_WAIT_PURCHASE_GOODS);
         }
 
+
+
         public List<Goods> GetWaitPurchaseGoodsByType(int type)
         {
-            return GetGoodsList(String.Format(GET_WAIT_PURCHASE_GOODS_BY_TYPE,type));
+            return GetGoodsList(String.Format(GET_WAIT_PURCHASE_GOODS_BY_TYPE, type));
         }
 
 
@@ -97,5 +103,12 @@ namespace SuperMarketManager.Service
                 return goods;
             }
         }
+
+        public List<Goods> SearchGoods(int part_id,String name)
+        {
+            return GetGoodsList(String.Format(SEARCH_GOODS_BYNAME,part_id,name));
+        }
+
+       // public List<Supplier>
     }
 }
