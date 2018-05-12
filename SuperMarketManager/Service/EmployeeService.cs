@@ -10,8 +10,8 @@ namespace SuperMarketManager.Service
 {
     public class EmployeeService
     {
-        private const String INSERT_EMPLOYEE_SQL = "insert into employee(name,phone,sex,part_id,time) values(\"{0}\",\"{1}\",{2},{3},{4},{5})";
-        private const String SELECT_EMPLOYEE_BY_PART = "select * from employee were part_id={0}";
+        private const String INSERT_EMPLOYEE_SQL = "insert into employee(name,phone,sex,part_id,time) values(\"{0}\",\"{1}\",{2},{3},{4})";
+        private const String SELECT_EMPLOYEE_BY_PART = "select * from employee where part_id={0}";
         private const String SELECT_EMPLOYEE_BY_ID = "select * from employee where id={0}";
 
 
