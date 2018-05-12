@@ -35,7 +35,7 @@
 <body class="body">
     <form id="form1" runat="server">
         <div >
-            <div class="nav navbar-inverse navbar-fixed-top">
+            <div class="nav navbar-inverse navbar-fixed-top" style="left: -184px; right: 184px; top: -16px">
                 <div class="market-title">
                     <asp:Image runat="server" Height="71px" ImageUrl="~/mmk_media/image/market_3.png" Width="493px" />
                 </div>
@@ -66,8 +66,8 @@
 
                 <asp:Button ID="search_btn" runat="server" style="height:30px;width:50px;font-size:14px;" Text="搜索" />
 
-                <asp:Button ID="emp_add" runat="server" Text="添加" class="btn_update"/>
-                <asp:Button ID="emp_update" runat="server" Text="修改" class="btn_delete"/>
+                <asp:Button ID="emp_add" runat="server" Text="添加" class="btn_update" OnClick="emp_add_Click"/>
+                <asp:Button ID="emp_update" runat="server" Text="修改" class="btn_delete" OnClick="emp_update_Click"/>
                 <asp:Button ID="emp_delete" runat="server" Text="删除" class="btn_delete"/>
 
             </div><br />
