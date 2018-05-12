@@ -23,5 +23,16 @@ namespace SuperMarketManager.View
         {
 
         }
+
+        protected void emp_update_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void emp_add_Click(object sender, EventArgs e)
+        {
+            //Response.Write("<script>window.showModelessDialog('Dialog_add_employee.aspx')</script>");
+            Response.Write("<script language='javascript'>window.open('" + "Dialog_add_employee.aspx" + "','','height=400,width=430, resizable=1,scrollbars=0,status=1,menubar=no,toolbar=no,location=yes,menu=no,left=" + emp_add.Style["left"] + " , top=" + emp_add.Style["top"] + "');</script>");
+        }
     }
 }

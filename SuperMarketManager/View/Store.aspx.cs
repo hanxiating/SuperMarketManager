@@ -13,5 +13,10 @@ namespace SuperMarketManager.View
         {
 
         }
+
+        protected void store_food_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
