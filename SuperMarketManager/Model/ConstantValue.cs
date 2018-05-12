@@ -13,6 +13,7 @@ namespace SuperMarketManager.Model
         public const int PURCHASE = 2;
         public const int SERVICE = 3;
         public const int LOGISTICS = 4;
+        public const int ALL_PART = 5;
 
         //商品
         public const int FOOD = 0;
@@ -21,5 +22,8 @@ namespace SuperMarketManager.Model
         public const int DRINK = 3;
         public const int STATIONARY = 4;
         public const int OTHERS = 5;
+
+        public void aa()
+        { }
     }
 }
