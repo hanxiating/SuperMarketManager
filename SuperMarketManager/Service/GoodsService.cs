@@ -23,14 +23,18 @@ namespace SuperMarketManager.Service
 
         
 
-        public bool AddGoods(Goods goods)
+        public int AddGoods(Goods goods)
         {
             return AddGoods(goods.Name, goods.Type, goods.Number, goods.Price, goods.Discount, goods.LimitNumber, goods.Status);
         }
 
-        public bool AddGoods(String name, int type, int number, float price, float discount, int limitNumber, int status)
+        public int AddGoods(String name, int type, int number, float price, float discount, int limitNumber, int status)
         {
-            return DatabaseTool.ExecSql(String.Format(INSERT_GOODS_SQL, name, type, number, price, discount, limitNumber, status));
+            if (DatabaseTool.ExecSql(String.Format(INSERT_GOODS_SQL, name, type, number, price, discount, limitNumber, status)))
+            {
+                return DatabaseTool.GetLastInsertId();
+            }
+            return -1;
         }
 
         public Goods GetGoodsById(int id)

@@ -15,13 +15,16 @@ namespace SuperMarketManager.Service
         private const String SELECT_EMPLOYEE_BY_ID = "select * from employee where id={0}";
 
 
-        public bool AddEmployee(Employee employee)
+        public int AddEmployee(Employee employee)
         {
             return AddEmployee(employee.Name, employee.Phone, employee.Sex, employee.PartId);
         }
-        public bool AddEmployee(String name, String phone, int sex, int partId)
+        public int AddEmployee(String name, String phone, int sex, int partId)
         {
-            return DatabaseTool.ExecSql(String.Format(INSERT_EMPLOYEE_SQL, name, phone, sex, partId, TimeUtils.GetCurrentTimeUnix()));
+            if (DatabaseTool.ExecSql(String.Format(INSERT_EMPLOYEE_SQL, name, phone, sex, partId, TimeUtils.GetCurrentTimeUnix()))) {
+                return DatabaseTool.GetLastInsertId();
+            }
+            return -1;
         }
 
         public List<Employee> GetEmployeeByPartId(int partId)
