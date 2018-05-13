@@ -10,7 +10,7 @@
 namespace SuperMarketManager.View {
     
     
-    public partial class WebForm5 {
+    public partial class Buy {
         
         /// <summary>
         /// form1 控件。
@@ -22,174 +22,120 @@ namespace SuperMarketManager.View {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// banana_add 控件。
+        /// client_all 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button banana_add;
+        protected global::System.Web.UI.WebControls.Button client_all;
         
         /// <summary>
-        /// banana_sub 控件。
+        /// client_food 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button banana_sub;
+        protected global::System.Web.UI.WebControls.Button client_food;
         
         /// <summary>
-        /// liulian_add 控件。
+        /// client_fruit 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button liulian_add;
+        protected global::System.Web.UI.WebControls.Button client_fruit;
         
         /// <summary>
-        /// liulian_sub 控件。
+        /// client_use 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button liulian_sub;
+        protected global::System.Web.UI.WebControls.Button client_use;
         
         /// <summary>
-        /// apple_add 控件。
+        /// client_drink 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button apple_add;
+        protected global::System.Web.UI.WebControls.Button client_drink;
         
         /// <summary>
-        /// apple_sub 控件。
+        /// client_wenju 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button apple_sub;
+        protected global::System.Web.UI.WebControls.Button client_wenju;
         
         /// <summary>
-        /// grape_add 控件。
+        /// client_other 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button grape_add;
+        protected global::System.Web.UI.WebControls.Button client_other;
         
         /// <summary>
-        /// grape_sub 控件。
+        /// Button1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button grape_sub;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// Button9 控件。
+        /// ScriptManager1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button9;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// Button10 控件。
+        /// UpdatePanel1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button10;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// orange_add 控件。
+        /// employeeInfo 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button orange_add;
+        protected global::System.Web.UI.WebControls.Table employeeInfo;
         
         /// <summary>
-        /// orange_sub 控件。
+        /// hide 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button orange_sub;
+        protected global::System.Web.UI.WebControls.HiddenField hide;
         
         /// <summary>
-        /// peach_add 控件。
+        /// hide_part 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button peach_add;
-        
-        /// <summary>
-        /// peach_sub 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button peach_sub;
-        
-        /// <summary>
-        /// pineapple_add 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button pineapple_add;
-        
-        /// <summary>
-        /// pineapple_sub 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button pineapple_sub;
-        
-        /// <summary>
-        /// strawberry_add 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button strawberry_add;
-        
-        /// <summary>
-        /// strawberry_sub 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button strawberry_sub;
-        
-        /// <summary>
-        /// Button19 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button19;
+        protected global::System.Web.UI.WebControls.HiddenField hide_part;
     }
 }

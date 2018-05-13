@@ -23,5 +23,20 @@ namespace SuperMarketManager.View
         {
 
         }
+
+        protected void banana_add_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void sub_Click(object sender, EventArgs e)
+        {
+
+        }
+        
+        protected void add_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

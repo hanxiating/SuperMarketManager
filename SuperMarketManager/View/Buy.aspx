@@ -1,463 +1,118 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Buy.aspx.cs" Inherits="SuperMarketManager.View.WebForm5" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Buy.aspx.cs" Inherits="SuperMarketManager.View.Buy" %>
 
 <!DOCTYPE html>
+<script runat="server">
+
+    Protected Sub Button1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+</script>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>员工管理</title>
+
+    <link href="../Content/view.css" type="text/css" rel="stylesheet"/>
+    <link href="../Content/bootstrap.css" type="text/css" rel="stylesheet"/>
+    <link href="../Content/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link href="../Content/Site.css" type="text/css" rel="stylesheet"/>
+    <link href="../mmk_media/image/supermarket.png" type="text/css" rel="stylesheet"/>
+
     <style type="text/css">
         .auto-style1 {
-            width: 135px;
+            width: 10%;
+            height: 600px;
+            float: left;
         }
         .auto-style2 {
-            width: 136px;
-        }
-        .auto-style3 {
-            width: 1024px;
-        }
-        .auto-style5 {
-            width: 125px;
-        }
-        .auto-style6 {
-            width: 148px;
-        }
-        .auto-style7 {
-            width: 213px;
+            text-align: center;
+            border-collapse: collapse;
+            border-left: 2px solid black;
+            border-right: 0px solid black;
+            border-top: 2px solid black;
+            border-bottom: 0px solid black;
+            margin-bottom: 20px;
+            border-color:lightgray;
+            border-width:3px;
         }
     </style>
+
+    <script type="text/javascript">
+         var selTr = null;
+         function GoSel(evt)
+         {
+            var el = evt.srcElement?evt.srcElement:evt.target;
+            if(el.tagName.toUpperCase() !="TD") return;
+             var tr = el.parentNode;
+             
+            tr.style.backgroundColor = "lightblue";
+            if(selTr !=null)
+            {
+                selTr.style.backgroundColor ="white";
+            }
+            
+             selTr = tr;
+             var str = tr.cells[0].innerText;
+             var part = tr.cells[4].innerText;
+             //alert(str);
+             document.getElementById("hide").value = str;
+             document.getElementById("hide_part").value = part;
+            // $("#lab_test").text = tr.cells[0].innerText;
+             //alert(tr.cells[0].innerText);
+         }
+ 
+    </script>
 </head>
 <body>
-    <form id="form1" runat="server">   
-        <table style="width:100%;">
-            <tr>
-                <td >
-                    <h1 align="left">
+    <form id="form1" runat="server">
+     <div >
+            <div class="nav navbar-inverse navbar-fixed-top">
+                <div class="market-title">
+                    <asp:Image runat="server" Height="71px" ImageUrl="~/Source/market_3.png" Width="493px" />
+                </div>
+                 
+            </div>
+        </div>
 
-                     <asp:Image runat="server" ImageUrl="~/Source/others/图片2.png" Height="108px" Width="580px"/></td></h1></td>
-                
-            </tr>
-            <tr>
-                <td>
-                    <table style="width:100%;">
-                        <tr>
-                            <td class="auto-style2">
-                                <table class="auto-style1">
-                                    <tr>
-                                        <td style="height:50px"align="center">HOT！</td>
-                                       
-                                    </tr>
-                                     <tr>
-                                        <td style="height:50px"align="center">食品</td>
-                                       
-                                    </tr>
-                                     <tr>
-                                        <td style="height:50px"align="center"> 水果</td>
-                                       
-                                    </tr>
-                                     <tr>
-                                        <td style="height:50px"align="center">日用品</td>
-                                       
-                                    </tr>
-                                     <tr>
-                                        <td style="height:50px"align="center">饮料</td>
-                                       
-                                    </tr>
-                                     <tr>
-                                        <td style="height:50px"align="center"> 文具</td>
-                                       
-                                    </tr>
-                                     <tr>
-                                        <td style="height:50px"align="center"> 其他</td>
-                                       
-                                    </tr>
-                                </table>
-                            </td>
-                            <td>
-                                <table class="auto-style3">
-                                    <tr>
-                                        <td class="auto-style6">
-                                            <table class="auto-style17">
-                                                <tr>
-                                                    <td class="auto-style14">
-                                                        <table class="auto-style9">
-                                                            <tr>
-                                                                <td class="auto-style10">
-                                                                    <asp:Image runat="server" ImageUrl="~/Source/fruit/banana.jpg" Height="91px" Width="113px"/>
-                                                                    </td>
+        <div id="menu" style="margin-left:15px;margin-top:75px;border-right:groove;" class="auto-style1">
+            <asp:Button ID="client_all" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="Hot!" ></asp:Button>
+            <asp:Button ID="client_food" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="食品" OnClick="emp_HR_Click"></asp:Button>
+            <asp:Button ID="client_fruit" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="水果"></asp:Button>
+            <asp:Button ID="client_use" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="日用品"></asp:Button>
+            <asp:Button ID="client_drink" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="饮料"></asp:Button>
+            <asp:Button ID="client_wenju" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="文具"></asp:Button>
+            <asp:Button ID="client_other" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="其他"></asp:Button>
+        </div>
 
-                                                               
-                                                            </tr>
-                                                            <tr>
-                                                                <td>名称：香蕉 <br />
-                                                                    单价：35.2元/斤</td>
-                                                               
-                                                            </tr>
-                                                            
-                                                        </table>
-                                                    </td>
-                                                    <td>
-                                                        <table class="auto-style16">
-                                                            <tr>
-                                                                <td>
-                                                                    <asp:Button ID="banana_add" runat="server" Text="+" />
-                                                                </td>
-                                                               
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <asp:Button ID="banana_sub" runat="server" Text="-" />
-                                                                </td>
-                                                                
-                                                            </tr>
-                                                            
-                                                        </table>
-                                                    </td>
-                                                   
-                                                </tr>
-                                               
-                                            </table>
-                                        </td>
-                                        <td class="auto-style6">
-                                            <table class="auto-style5">
-                                                <tr>
-                                                    <td class="auto-style8">
-                                                        <table class="auto-style15">
-                                                            <tr>
-                                                                <td class="auto-style12">
-                                                                    <asp:Image runat="server" ImageUrl="~/Source/fruit/liulian.png" Height="91px" Width="119px"/></td>
-                                                               
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="auto-style13">名称：榴莲 <br />
-                                                                    单价：35.2元/斤</td>
-                                                               
-                                                            </tr>
-                                                            
-                                                        </table>
-                                                    </td>
-                                                    <td>
-                                                        <table style="width:100%;">
-                                                            <tr>
-                                                                <td>
-                                                                    <asp:Button ID="liulian_add" runat="server" Text="+" />
-                                                                </td>
-                                                               
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <asp:Button ID="liulian_sub" runat="server" Text="-" />
-                                                                </td>
-                                                                
-                                                            </tr>
-                                                            
-                                                        </table>
-                                                    </td>
-                                                   
-                                                </tr>
-                                               
-                                            </table>
-                                        </td>
-                                        <td class="auto-style6">
-                                            <table class="auto-style5">
-                                                <tr>
-                                                    <td class="auto-style8">
-                                                        <table class="auto-style18">
-                                                            <tr>
-                                                                <td class="auto-style10">
-                                                                     <asp:Image runat="server" ImageUrl="~/Source/fruit/apple1.jpg" Height="91px" Width="114px"/></td>
-                                                               
-                                                            </tr>
-                                                            <tr>
-                                                                <td>名称：苹果  
-                                                                    <br />
-                                                                    单价：35.2元/斤</td>
-                                                               
-                                                            </tr>
-                                                            
-                                                        </table>
-                                                    </td>
-                                                    <td>
-                                                        <table style="width:100%;">
-                                                            <tr>
-                                                                <td>
-                                                                    <asp:Button ID="apple_add" runat="server" Text="+" />
-                                                                </td>
-                                                               
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <asp:Button ID="apple_sub" runat="server" Text="-" />
-                                                                </td>
-                                                                
-                                                            </tr>
-                                                            
-                                                        </table>
-                                                    </td>
-                                                   
-                                                </tr>
-                                               
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="auto-style6">
-                                            <table class="auto-style5">
-                                                <tr>
-                                                    <td class="auto-style7">
-                                                        <table class="auto-style19">
-                                                            <tr>
-                                                                <td class="auto-style10">
-                                                                     <asp:Image runat="server" ImageUrl="~/Source/fruit/grape.jpg" Height="91px" Width="113px"/></td>
-                                                               
-                                                            </tr>
-                                                            <tr>
-                                                                <td>名称：葡萄 单价：35.2元/斤</td>
-                                                               
-                                                            </tr>
-                                                            
-                                                        </table>
-                                                    </td>
-                                                    <td>
-                                                        <table style="width:100%;">
-                                                            <tr>
-                                                                <td>
-                                                                    <asp:Button ID="grape_add" runat="server" Text="+" />
-                                                                </td>
-                                                               
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <asp:Button ID="grape_sub" runat="server" Text="-" />
-                                                                </td>
-                                                                
-                                                            </tr>
-                                                            
-                                                        </table>
-                                                    </td>
-                                                   
-                                                </tr>
-                                               
-                                            </table>
-                                        </td>
-                                        <td class="auto-style6">
-                                            <table class="auto-style5">
-                                                <tr>
-                                                    <td class="auto-style8">
-                                                        <table class="auto-style9">
-                                                            <tr>
-                                                                <td class="auto-style10">
-                                                                     <asp:Image runat="server" ImageUrl="~/Source/fruit/mango.jpg" Height="91px" Width="113px"/></td>
-                                                               
-                                                            </tr>
-                                                            <tr>
-                                                                <td>名称：芒果 单价：35.2元/斤</td>
-                                                               
-                                                            </tr>
-                                                            
-                                                        </table>
-                                                    </td>
-                                                    <td>
-                                                        <table style="width:100%;">
-                                                            <tr>
-                                                                <td>
-                                                                    <asp:Button ID="Button9" runat="server" Text="+" />
-                                                                </td>
-                                                               
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <asp:Button ID="Button10" runat="server" Text="-" />
-                                                                </td>
-                                                                
-                                                            </tr>
-                                                            
-                                                        </table>
-                                                    </td>
-                                                   
-                                                </tr>
-                                               
-                                            </table>
-                                        </td>
-                                        <td class="auto-style6">
-                                            <table class="auto-style5">
-                                                <tr>
-                                                    <td class="auto-style8">
-                                                        <table class="auto-style9">
-                                                            <tr>
-                                                                <td class="auto-style10">
-                                                                     <asp:Image runat="server" ImageUrl="~/Source/fruit/orange.jpg" Height="91px" Width="113px"/></td>
-                                                               
-                                                            </tr>
-                                                            <tr>
-                                                                <td>名称：香橙 单价：35.2元/斤</td>
-                                                               
-                                                            </tr>
-                                                            
-                                                        </table>
-                                                    </td>
-                                                    <td>
-                                                        <table style="width:100%;">
-                                                            <tr>
-                                                                <td>
-                                                                    <asp:Button ID="orange_add" runat="server" Text="+" />
-                                                                </td>
-                                                               
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <asp:Button ID="orange_sub" runat="server" Text="-" />
-                                                                </td>
-                                                                
-                                                            </tr>
-                                                            
-                                                        </table>
-                                                    </td>
-                                                   
-                                                </tr>
-                                               
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="auto-style6">
-                                            <table class="auto-style5">
-                                                <tr>
-                                                    <td class="auto-style14">
-                                                        <table class="auto-style20">
-                                                            <tr>
-                                                                <td class="auto-style10">
-                                                                     <asp:Image runat="server" ImageUrl="~/Source/fruit/peach1.jpg" Height="91px" Width="114px"/></td>
-                                                               
-                                                            </tr>
-                                                            <tr>
-                                                                <td>名称：桃子 单价：35.2元/斤</td>
-                                                               
-                                                            </tr>
-                                                            
-                                                        </table>
-                                                    </td>
-                                                    <td>
-                                                        <table style="width:100%;">
-                                                            <tr>
-                                                                <td>
-                                                                    <asp:Button ID="peach_add" runat="server" Text="+" />
-                                                                </td>
-                                                               
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <asp:Button ID="peach_sub" runat="server" Text="-" />
-                                                                </td>
-                                                                
-                                                            </tr>
-                                                            
-                                                        </table>
-                                                    </td>
-                                                   
-                                                </tr>
-                                               
-                                            </table>
-                                        </td>
-                                        <td class="auto-style6">
-                                            <table class="auto-style5">
-                                                <tr>
-                                                    <td class="auto-style8">
-                                                        <table class="auto-style9">
-                                                            <tr>
-                                                                <td class="auto-style10">
-                                                                     <asp:Image runat="server" ImageUrl="~/Source/fruit/pineaple.png" Height="91px" Width="113px"/></td>
-                                                               
-                                                            </tr>
-                                                            <tr>
-                                                                <td>名称：菠萝 单价：35.2元/斤</td>
-                                                               
-                                                            </tr>
-                                                            
-                                                        </table>
-                                                    </td>
-                                                    <td>
-                                                        <table style="width:100%;">
-                                                            <tr>
-                                                                <td>
-                                                                    <asp:Button ID="pineapple_add" runat="server" Text="+" />
-                                                                </td>
-                                                               
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <asp:Button ID="pineapple_sub" runat="server" Text="-" />
-                                                                </td>
-                                                                
-                                                            </tr>
-                                                            
-                                                        </table>
-                                                    </td>
-                                                   
-                                                </tr>
-                                               
-                                            </table>
-                                        </td>
-                                        <td class="auto-style6">
-                                            <table class="auto-style5">
-                                                <tr >
-                                                    <td class="auto-style8">
-                                                        <table class="auto-style9">
-                                                            <tr>
-                                                                <td class="auto-style10">
-                                                                     <asp:Image runat="server" ImageUrl="~/Source/fruit/strawberrey.jpg" Height="91px" Width="113px"/></td>
-                                                               
-                                                            </tr>
-                                                            <tr>
-                                                                <td>名称：草莓 单价：35.2元/斤</td>
-                                                               
-                                                            </tr>
-                                                            
-                                                        </table>
-                                                    </td>
-                                                    <td>
-                                                        <table style="width:100%;">
-                                                            <tr>
-                                                                <td>
-                                                                    <asp:Button ID="strawberry_add" runat="server" Text="+" />
-                                                                </td>
-                                                               
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <asp:Button ID="strawberry_sub" runat="server" Text="-" />
-                                                                </td>
-                                                                
-                                                            </tr>
-                                                            
-                                                        </table>
-                                                    </td>
-                                                   
-                                                </tr>
-                                               
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                            
-                        </tr>
-                       
-                        
-                    </table>
-                </td>
+        <div id="content" style="width:80%;float:left;margin-left:20px;margin-top:70px;">
+            <div style="text-align:left;margin-top:15px;margin-left:70px;">
+
                 
-            </tr>
-            <tr style="text-align:right">
-                <td>
-                    <div style=" margin-left: auto; margin-right: auto; background: #eee;">
-                        <asp:Button ID="Button19" runat="server" Text="提交" Height="43px" Width="121px" Font-Size="Medium" OnClick="Button19_Click1"  />
-                    </div> 
-                    
-                </td>
-              
-            </tr>
-        </table>
+                <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+
+            </div><br />
+           
+            <asp:ScriptManager ID="ScriptManager1" runat="server" />  
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">  
+                <ContentTemplate>  
+                    <asp:Table ID="employeeInfo" runat="server"  CssClass="auto-style2 asp-table" Height="37px" Width="1024px" onclick="javascript:GoSel(event);" >
+                        <asp:TableHeaderRow CssClass="header-font asp-table-header">
+                            <asp:TableHeaderCell CssClass="table-bordered td text-center ">商品名</asp:TableHeaderCell>
+                            <asp:TableHeaderCell CssClass="table-bordered td text-center">售价</asp:TableHeaderCell>
+                            <asp:TableHeaderCell CssClass="table-bordered td text-center">库存</asp:TableHeaderCell>
+                            <asp:TableHeaderCell CssClass="table-bordered td text-center">购买量</asp:TableHeaderCell>
+                        </asp:TableHeaderRow>
+                    </asp:Table>
+                 </ContentTemplate>  
+                <Triggers>  
+                    <asp:AsyncPostBackTrigger ControlID="emp_delete" EventName="Click" />  
+                    <asp:AsyncPostBackTrigger ControlID="search_btn" EventName="Click" />
+                </Triggers> 
+            </asp:UpdatePanel>  
+        </div>
+        <asp:HiddenField ID="hide" runat="server" />
+        <asp:HiddenField ID="hide_part" runat="server" />
     </form>
 </body>
 </html>
