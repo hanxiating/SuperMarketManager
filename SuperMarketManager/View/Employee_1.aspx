@@ -66,7 +66,7 @@
 
                 <asp:Button ID="search_btn" runat="server" style="height:30px;width:50px;font-size:14px;" Text="搜索" />
 
-                <asp:Button ID="emp_add" runat="server" Text="添加员工" class="btn_update"/>
+                <asp:Button ID="emp_add" runat="server" Text="添加员工" class="btn_update" OnClick="emp_add_Click" Width="69px"/>
                <%-- <asp:Button ID="emp_update" runat="server" Text="修改" class="btn_delete"/>
                 <asp:Button ID="emp_delete" runat="server" Text="删除" class="btn_delete"/>--%>
 

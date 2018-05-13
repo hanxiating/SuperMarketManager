@@ -74,19 +74,19 @@ namespace SuperMarketManager.View
                 int partid=emp[i].PartId;
                 switch (partid)
                 {
-                    case HR:
+                    case ConstantValue.HR:
                         Depart.Text = "人事部";
                         break;
-                    case FINANCE:
+                    case ConstantValue.FINANCE:
                         Depart.Text = "财务部";
                         break;
-                    case PURCHAES:
+                    case ConstantValue.PURCHASE:
                         Depart.Text = "采购部";
                         break;
-                    case SERVICE:
+                    case ConstantValue.SERVICE:
                         Depart.Text = "客服部";
                         break;
-                    case LOGISTICS:
+                    case ConstantValue.LOGISTICS:
                         Depart.Text = "后勤部";
                         break;
                     default:break;
@@ -131,9 +131,14 @@ namespace SuperMarketManager.View
         //获取人事部全部员工的信息
         protected void emp_HR_Click(object sender, EventArgs e)
         {
-            List <Model.Employee> emp_list = empService.GetEmployeeByPartId(HR);
+            List <Model.Employee> emp_list = empService.GetEmployeeByPartId(ConstantValue.HR);
             add_employee(emp_list);
 
+        }
+
+        protected void emp_add_Click(object sender, EventArgs e)
+        {
+            Response.Write("<script language='javascript'>window.open('" + "Dialog_add_employee.aspx" + "','','height=400,width=430, resizable=1,scrollbars=0,status=1,menubar=no,toolbar=no,location=yes,menu=no,left=" + emp_add.Style["left"] + " , top=" + emp_add.Style["top"] + "');</script>");
         }
     }
 }

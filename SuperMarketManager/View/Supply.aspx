@@ -58,7 +58,7 @@
 
                 <asp:Button ID="search_btn" runat="server" style="height:30px;width:50px;font-size:14px;" Text="搜索"/>
 
-                 <asp:Button ID="supply_add" runat="server" Text="添加" class="btn_update"/>
+                 <asp:Button ID="supply_add" runat="server" Text="添加" class="btn_update" OnClick="supply_add_Click"/>
 
             </div><br />
            

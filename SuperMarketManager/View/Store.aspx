@@ -65,8 +65,8 @@
                 <asp:TextBox ID="search_text" runat="server" style="width:200px;height:30px;"></asp:TextBox>
 
                 <asp:Button ID="search_btn" runat="server" style="height:30px;width:50px;font-size:14px;" Text="搜索"/>
-
-                <asp:Button ID="store_add" runat="server" Text="进货" class="btn_update"/>
+                <asp:Button ID="object_add" runat="server" Text="增加物品" class="btn_update" OnClick="object_add_Click" Width="59px"/>
+                <asp:Button ID="store_add" runat="server" Text="进货" class="btn_update" OnClick="store_add_Click"/>
 
             </div><br />
            

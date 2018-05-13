@@ -8,31 +8,21 @@ using SuperMarketManager.Service;
 
 namespace SuperMarketManager.View
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class WebForm3 : System.Web.UI.Page
     {
-        EmployeeService employeeService = new EmployeeService();
-
+        GoodsService goodsService = new GoodsService();
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        protected void Button1_Click1(object sender, EventArgs e)
         {
 
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if (TextBox2.Text == "" || TextBox4.Text == "")
+            if (TextBox4.Text == ""||TextBox1.Text==""|| TextBox3.Text == ""|| TextBox5.Text == ""||TextBox6.Text == "")
                 Response.Write("填写失败，信息不能为空");
             else
             {
-                employeeService.AddEmployee(TextBox2.Text, TextBox4.Text, int.Parse(Sex.SelectedItem.Value), int.Parse(DropDownList1.SelectedValue.ToString()));
+                goodsService.AddGoods(TextBox1.Text, int.Parse(DropDownList1.SelectedItem.Value),int.Parse(TextBox3.Text),int.Parse(TextBox4.Text),float.Parse(TextBox5.Text),int.Parse(TextBox6.Text),1);
                 Response.Write("添加成功！");
             }
         }
