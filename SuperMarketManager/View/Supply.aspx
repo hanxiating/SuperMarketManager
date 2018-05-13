@@ -48,22 +48,23 @@
         <div id="content" style="width:80%;height:600px;float:left;margin-left:20px;margin-top:70px;">
             <div style="text-align:left;margin-top:15px;margin-left:70px;">
                 <asp:DropDownList ID="DropDownList1" runat="server">
-                    <asp:ListItem>请选择供应商品种类</asp:ListItem>
-                    <asp:ListItem>食品</asp:ListItem>
-                    <asp:ListItem>水果</asp:ListItem>
-                    <asp:ListItem>日用品</asp:ListItem>
-                    <asp:ListItem>文具</asp:ListItem>
-                    <asp:ListItem>其他</asp:ListItem>
+                    <asp:ListItem Value="0">请选择供应商品种类</asp:ListItem>
+                    <asp:ListItem Value="0">食品</asp:ListItem>
+                    <asp:ListItem Value="1">水果</asp:ListItem>
+                    <asp:ListItem Value="2">日用品</asp:ListItem>
+                    <asp:ListItem Value="3">饮料</asp:ListItem>
+                    <asp:ListItem Value="4">文具</asp:ListItem>
+                    <asp:ListItem Value="5">其他</asp:ListItem>
                 </asp:DropDownList>
 
-                <asp:Button ID="search_btn" runat="server" style="height:30px;width:50px;font-size:14px;" Text="搜索"/>
+                <asp:Button ID="search_btn" runat="server" style="height:30px;width:50px;font-size:14px;" Text="搜索" OnClick="search_btn_Click"/>
 
                  <asp:Button ID="supply_add" runat="server" Text="添加" class="btn_update" OnClick="supply_add_Click"/>
 
             </div><br />
            
 
-            <asp:Table ID="employeeInfo" runat="server"  CssClass="auto-style2 asp-table" Height="37px" Width="1024px">
+            <asp:Table ID="supplyTable" runat="server"  CssClass="auto-style2 asp-table" Height="37px" Width="1024px">
                 <asp:TableHeaderRow CssClass="header-font asp-table-header">
                     <asp:TableHeaderCell CssClass="table-bordered td text-center">供应商名称</asp:TableHeaderCell>
                     <asp:TableHeaderCell CssClass="table-bordered td text-center">地址</asp:TableHeaderCell>
