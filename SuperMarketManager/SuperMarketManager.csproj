@@ -352,7 +352,6 @@
     <Content Include="View\Sale.aspx" />
     <Content Include="View\Store.aspx" />
     <Content Include="View\Supply.aspx" />
-    <Content Include="View\test_1.aspx" />
     <Content Include="View\Dialog_add_employee.aspx" />
     <Content Include="View\Dialog_add_supply.aspx" />
     <Content Include="View\Dialog_add_goods.aspx" />
@@ -436,6 +435,41 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="View\Buy.aspx.cs">
+      <DependentUpon>Buy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Buy.aspx.designer.cs">
+      <DependentUpon>Buy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog_add_employee.aspx.cs">
+      <DependentUpon>Dialog_add_employee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Dialog_add_employee.aspx.designer.cs">
+      <DependentUpon>Dialog_add_employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog_add_goods.aspx.cs">
+      <DependentUpon>Dialog_add_goods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Dialog_add_goods.aspx.designer.cs">
+      <DependentUpon>Dialog_add_goods.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog_add_supply.aspx.cs">
+      <DependentUpon>Dialog_add_supply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Dialog_add_supply.aspx.designer.cs">
+      <DependentUpon>Dialog_add_supply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog_input.aspx.cs">
+      <DependentUpon>Dialog_input.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Dialog_input.aspx.designer.cs">
+      <DependentUpon>Dialog_input.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Employee_1.aspx.cs">
       <DependentUpon>Employee_1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -470,13 +504,6 @@
     </Compile>
     <Compile Include="View\Supply.aspx.designer.cs">
       <DependentUpon>Supply.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="View\test_1.aspx.cs">
-      <DependentUpon>test_1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="View\test_1.aspx.designer.cs">
-      <DependentUpon>test_1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
