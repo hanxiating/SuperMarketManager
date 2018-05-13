@@ -83,7 +83,7 @@
             <asp:Button ID="emp_purches" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="采购部"></asp:Button>
             <asp:Button ID="emp_service" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="客服部"></asp:Button>
             <asp:Button ID="emp_rear" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="后勤部"></asp:Button>
-            <asp:Button ID="emp_back" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="返回"></asp:Button>
+            <asp:Button ID="emp_back" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="返回" OnClick="emp_back_Click"></asp:Button>
         </div>
 
         <div id="content" style="width:80%;float:left;margin-left:20px;margin-top:70px;">

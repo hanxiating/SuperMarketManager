@@ -16,6 +16,7 @@
                         <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
                             <asp:ListItem></asp:ListItem>
                         </asp:DropDownList>
+                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                     </td>
                    
                 </tr>
