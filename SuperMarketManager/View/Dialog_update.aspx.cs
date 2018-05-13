@@ -13,8 +13,11 @@ namespace SuperMarketManager.View
     {
         EmployeeService employeeService = new EmployeeService();
         Model.Employee employee = new Model.Employee();
+        Employee e = new Employee();
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            //int id = e.
             /*employee = employeeService.GetEmployeeById();//传过来行获取的ID
             TextBox1.Text=employee.Name;
             TextBox3.Text = employee.Phone;*/

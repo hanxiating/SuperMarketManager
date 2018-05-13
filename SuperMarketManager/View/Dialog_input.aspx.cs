@@ -12,19 +12,23 @@ namespace SuperMarketManager.View
 {
     public partial class WebForm4 : System.Web.UI.Page
     {
-        Store store = new Store();
+        //Store store = new Store();
         GoodsSupplierService goodsSupplierService = new GoodsSupplierService();
         PurchaseService purchaseService = new PurchaseService();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            int id=int.Parse(store.goodsId);
+            string test=Store.goodsId;
+            int id=int.Parse(Store.goodsId);
             List<Model.Supplier> supplies = goodsSupplierService.GetSuppliers(id);
             ListItem li = new ListItem();
-            for(int i=0;i<supplies.Count;i++)
+            if (supplies != null)
             {
-                li.Text = supplies[i].Name;
-                DropDownList1.Items.Add(li);
+                for (int i = 0; i < supplies.Count; i++)
+                {
+                    li.Text = supplies[i].Name;
+                    DropDownList1.Items.Add(li);
+                }
             }
            
             /*List<Supply> supplies=
@@ -46,12 +50,9 @@ namespace SuperMarketManager.View
         protected void Button1_Click(object sender, EventArgs e)
         {
             //向后台提供采购货物的id，采购数量
-            purchaseService.AddSales(int.Parse(store.goodsId),int.Parse(TextBox1.Text.Trim()));
+            purchaseService.AddSales(int.Parse(Store.goodsId),int.Parse(TextBox1.Text.Trim()));
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
-        {
-            ClientScript.RegisterStartupScript(Page.GetType(), "", "<script language=javascript>window.opener=null;window.open('','_self');window.close();</script>");
-        }
+        
     }
 }

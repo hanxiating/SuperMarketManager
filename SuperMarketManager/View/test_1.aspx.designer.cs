@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SuperMarketManager.View {
-    
-    
-    public partial class test_1 {
-        
+namespace SuperMarketManager.View
+{
+
+
+    public partial class test_1
+    {
+
         /// <summary>
         /// form1 控件。
         /// </summary>

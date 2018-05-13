@@ -30,6 +30,31 @@
             border-width:3px;
         }
     </style>
+     <script type="text/javascript">
+         var selTr = null;
+         function GoSel(evt)
+         {
+            var el = evt.srcElement?evt.srcElement:evt.target;
+            if(el.tagName.toUpperCase() !="TD") return;
+             var tr = el.parentNode;
+             
+            tr.style.backgroundColor = "lightblue";
+            if(selTr !=null)
+            {
+                selTr.style.backgroundColor ="white";
+            }
+            
+             selTr = tr;
+             var str = tr.cells[0].innerText;
+             var part = tr.cells[2].innerText;
+             //alert(str);
+             document.getElementById("hide_goodsId").value = str;
+             document.getElementById("hide_goodsType").value = part;
+            // $("#lab_test").text = tr.cells[0].innerText;
+             //alert(tr.cells[0].innerText);
+         }
+ 
+    </script>
     <script src="aspTable.js" lang="javascript" type="text/javascript"></script>
 
 </head>
@@ -52,6 +77,7 @@
         </div>
 
         <div id="menu" style="margin-left:15px;margin-top:75px;border-right:groove;" class="auto-style1">
+            <asp:Button ID="store_all" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="全部" OnClick="store_all_Click" />
             <asp:Button ID="store_food" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="食品" OnClick="store_food_Click"></asp:Button>
             <asp:Button ID="store_fruit" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="水果" OnClick="store_fruit_Click"></asp:Button>
             <asp:Button ID="store_daliy" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="日用品" OnClick="store_daliy_Click"></asp:Button>
@@ -72,7 +98,7 @@
             </div><br />
            
 
-            <asp:Table ID="storeInfo" runat="server"  CssClass="auto-style2 asp-table" Height="37px" Width="1024px" Onclick="GoSel(event)">
+            <asp:Table ID="storeInfo" runat="server"  CssClass="auto-style2 asp-table" Height="37px" Width="1024px" onclick="javascript:GoSel(event);">
                 <asp:TableHeaderRow CssClass="header-font asp-table-header">
                     <asp:TableHeaderCell CssClass="table-bordered td text-center ">商品编号</asp:TableHeaderCell>
                     <asp:TableHeaderCell CssClass="table-bordered td text-center">名称</asp:TableHeaderCell>
