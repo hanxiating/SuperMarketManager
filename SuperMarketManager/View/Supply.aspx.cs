@@ -65,6 +65,7 @@ namespace SuperMarketManager.View
             {
                 AddSupplierToTable(new SupplierService().GetSuppliersForGoodsType(Convert.ToInt32(DropDownList1.SelectedValue)));
             }
+            
         }
     }
 }
