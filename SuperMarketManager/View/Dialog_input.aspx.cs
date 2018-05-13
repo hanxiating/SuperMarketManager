@@ -48,5 +48,10 @@ namespace SuperMarketManager.View
             //向后台提供采购货物的id，采购数量
             purchaseService.AddSales(int.Parse(store.goodsId),int.Parse(TextBox1.Text.Trim()));
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            ClientScript.RegisterStartupScript(Page.GetType(), "", "<script language=javascript>window.opener=null;window.open('','_self');window.close();</script>");
+        }
     }
 }

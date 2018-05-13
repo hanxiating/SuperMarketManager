@@ -39,7 +39,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <table class="auto-style3">
+            <table class="auto-style3" id="cbtable">
                 <tr>
                     <td>
                         <table style="width:100%;">
@@ -126,17 +126,12 @@
                   
                 </tr>
                 <tr>
-                    <td>选择供应商对应的货物类型</td>
+                    <td>选择供应商对应的货物种类</td>
                     <td>&nbsp;</td>
                     
                 </tr>
                 <tr>
-                    <td> <asp:CheckBox ID="food" runat="server" Text="食品" />
-                        <asp:CheckBox ID="fruit" runat="server" Text="水果" />
-                        <asp:CheckBox ID="daily" runat="server" Text="日用品" />
-                        <asp:CheckBox ID="drink" runat="server" Text="饮料" />
-                        <asp:CheckBox ID="pen" runat="server" Text="文具" />
-                        <asp:CheckBox ID="others" runat="server" Text="其他" /></td>
+                    <td id="cb" > <asp:CheckBoxList ID="CheckBoxList1" runat="server"></asp:CheckBoxList> </td>
                     
                     
                 </tr>
