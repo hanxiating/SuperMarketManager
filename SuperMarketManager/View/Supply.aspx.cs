@@ -13,5 +13,10 @@ namespace SuperMarketManager.View
         {
 
         }
+
+        protected void supply_add_Click(object sender, EventArgs e)
+        {
+            Response.Write("<script language='javascript'>window.open('" + "Dialog_add_supply.aspx" + "','','height=400,width=430, resizable=1,scrollbars=0,status=1,menubar=no,toolbar=no,location=yes,menu=no,left=" + supply_add.Style["left"] + " , top=" + supply_add.Style["top"] + "');</script>");
+        }
     }
 }

@@ -24,6 +24,12 @@ namespace SuperMarketManager.Database
             MySqlCommand command = new MySqlCommand(sql, GetSqlConnection());
             return command.ExecuteNonQuery() > 0 ? true : false;
         }
+
+        public static int GetLastInsertId()
+        {
+            MySqlCommand command = new MySqlCommand("SELECT LAST_INSERT_ID()", GetSqlConnection());
+            return command.ExecuteNonQuery();
+        }
         public static List<Dictionary<String, Object>> ExecSqlWithReturn(String sql)
         {
             List<Dictionary<String, Object>> list = new List<Dictionary<string, object>>();

@@ -22,7 +22,6 @@ namespace SuperMarketManager.Model
         public const int DRINK = 3;
         public const int STATIONARY = 4;
         public const int OTHERS = 5;
-
-       
+        public const int ALL = 6;
     }
 }

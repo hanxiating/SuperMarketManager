@@ -344,7 +344,6 @@
     <Content Include="Source\fruit\strawberrey.jpg" />
     <Content Include="Source\others\图片2.png" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="View\Dialog_input.aspx" />
     <Content Include="View\Dialog_order.aspx" />
     <Content Include="View\login.aspx" />
     <Content Include="View\Main_Customer.aspx" />
@@ -354,8 +353,14 @@
     <Content Include="View\Store.aspx" />
     <Content Include="View\Supply.aspx" />
     <Content Include="View\test_1.aspx" />
-    <Content Include="View\test_employee.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="View\Dialog_add_employee.aspx" />
+    <Content Include="View\Dialog_add_supply.aspx" />
+    <Content Include="View\Dialog_add_goods.aspx" />
+    <Content Include="View\Dialog_input.aspx" />
+    <Content Include="View\Buy.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
@@ -472,13 +477,6 @@
     </Compile>
     <Compile Include="View\test_1.aspx.designer.cs">
       <DependentUpon>test_1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="View\test_employee.aspx.cs">
-      <DependentUpon>test_employee.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="View\test_employee.aspx.designer.cs">
-      <DependentUpon>test_employee.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

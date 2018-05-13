@@ -9,11 +9,10 @@ namespace SuperMarketManager.Service
 {
     public class EmployeeService
     {
-        private const String INSERT_EMPLOYEE_SQL = "insert into employee(name,phone,sex,part_id,time) values(\"{0}\",\"{1}\",{2},{3},{4},{5})";
+        private const String INSERT_EMPLOYEE_SQL = "insert into employee(name,phone,sex,part_id,time) values(\"{0}\",\"{1}\",{2},{3},{4})";
         private const String SELECT_EMPLOYEE_BY_PART = "select * from employee where part_id={0}";
         private const String SELECT_EMPLOYEE_BY_ID = "select * from employee where id={0}";
         private const String DELETE_EMPLOYEE_BY_ID = "delete from employee where id={0}";
-
         public bool AddEmployee(Employee employee)
         {
             return AddEmployee(employee.Name, employee.Phone, employee.Sex, employee.PartId);
@@ -57,6 +56,24 @@ namespace SuperMarketManager.Service
             else
             {
                 return Employee.CreateEmployee(result[0]);
+            }
+        }
+
+        public List<Employee> GetEmployeeByPartName(String partId, String name)
+        {
+            List<Dictionary<String, Object>> result = DatabaseTool.ExecSqlWithReturn(String.Format(SELECT_EMPLOYEE_BY_PART_NAME, partId,name));
+            if (null == result || result.Count < 1)
+            {
+                return null;
+            }
+            else
+            {
+                List<Employee> employees = new List<Employee>();
+                foreach (Dictionary<String, Object> dic in result)
+                {
+                    employees.Add(Employee.CreateEmployee(dic));
+                }
+                return employees;
             }
         }
 
