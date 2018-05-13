@@ -77,7 +77,7 @@
                  <tr>
                     <td class="auto-style1">
                         <asp:Button ID="Button1" runat="server" Text="确定" OnClick="Button1_Click" />
-                        <asp:Button ID="Button2" runat="server" Text="取消" />
+                        <asp:Button ID="Button2" runat="server" Text="取消" OnClick="Button2_Click" />
                      </td>
                     <td>&nbsp;</td>
                     

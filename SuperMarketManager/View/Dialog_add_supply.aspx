@@ -148,7 +148,7 @@
                                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="确定" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="Button2" runat="server" Text="取消" style="height: 21px" />
+                                    <asp:Button ID="Button2" runat="server" Text="取消" style="height: 21px" OnClick="Button2_Click" />
                                 </td>
                                
                             </tr>

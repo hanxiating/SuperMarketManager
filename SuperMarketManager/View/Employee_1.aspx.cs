@@ -258,6 +258,11 @@ namespace SuperMarketManager.View
         {
 
         }
+
+        protected void emp_all_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     

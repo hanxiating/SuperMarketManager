@@ -27,7 +27,7 @@
                 <tr>
                     <td>
                         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="确定" />
-                        <asp:Button ID="Button2" runat="server" Text="取消" />
+                        <asp:Button ID="Button2" runat="server" Text="取消" OnClick="Button2_Click" />
                     </td>
                     
                 </tr>
