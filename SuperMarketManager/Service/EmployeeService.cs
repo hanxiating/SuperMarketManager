@@ -17,6 +17,7 @@ namespace SuperMarketManager.Service
 
 
         private const String DELETE_EMPLOYEE_BY_ID = "delete from employee where id={0}";
+        //private const String SELECT_EMPLOYEE_BY_PART_NAME = "select * from employee where part_id={0} and name={1}";
         public bool AddEmployee(Employee employee)
         {
             return AddEmployee(employee.Name, employee.Phone, employee.Sex, employee.PartId);

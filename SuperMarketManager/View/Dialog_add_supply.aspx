@@ -25,11 +25,14 @@
         .auto-style6 {
             width: 260px;
         }
-        .auto-style7 {
-            margin-left: 3px;
-        }
         .auto-style8 {
             margin-left: 1px;
+        }
+        .auto-style9 {
+            width: 21%;
+        }
+        .auto-style10 {
+            width: 133px;
         }
     </style>
 </head>
@@ -108,28 +111,45 @@
                     <td>
                         <table class="auto-style4">
                             <tr>
-                                <td class="auto-style3">
+                                <td class="auto-style9">
                                     <asp:Label ID="Label5" runat="server" Text="备注"></asp:Label>
-                                    <asp:TextBox ID="TextBox6" runat="server" Width="136px" CssClass="auto-style7"></asp:TextBox>
                                 </td>
                                 <td>
-                                    &nbsp;</td>
+                                    <asp:TextBox ID="TextBox6" runat="server" Width="136px" CssClass="auto-style4"></asp:TextBox>
+                                </td>
                                
                             </tr>
+
                             
                         </table>
                     </td>
                   
                 </tr>
                 <tr>
+                    <td>选择供应商对应的货物类型</td>
+                    <td>&nbsp;</td>
+                    
+                </tr>
+                <tr>
+                    <td> <asp:CheckBox ID="food" runat="server" Text="食品" />
+                        <asp:CheckBox ID="fruit" runat="server" Text="水果" />
+                        <asp:CheckBox ID="daily" runat="server" Text="日用品" />
+                        <asp:CheckBox ID="drink" runat="server" Text="饮料" />
+                        <asp:CheckBox ID="pen" runat="server" Text="文具" />
+                        <asp:CheckBox ID="others" runat="server" Text="其他" /></td>
+                    
+                    
+                </tr>
+                <tr>
                     <td>
                         <table style="width:100%;">
                             <tr>
-                                <td>
+                                <td class="auto-style10">
                                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="确定" />
-                                    <asp:Button ID="Button2" runat="server" Text="取消" style="height: 21px" />
                                 </td>
-                                <td>&nbsp;</td>
+                                <td>
+                                    <asp:Button ID="Button2" runat="server" Text="取消" style="height: 21px" OnClick="Button2_Click" />
+                                </td>
                                
                             </tr>
                             
@@ -137,6 +157,7 @@
                     </td>
                   
                 </tr>
+
             </table>
         </div>
     </form>
