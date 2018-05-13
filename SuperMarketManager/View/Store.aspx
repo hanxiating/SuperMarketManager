@@ -30,6 +30,7 @@
             border-width:3px;
         }
     </style>
+    <script src="aspTable.js" lang="javascript" type="text/javascript"></script>
 
 </head>
 <body class="body">
@@ -71,23 +72,18 @@
             </div><br />
            
 
-            <asp:Table ID="storeInfo" runat="server"  CssClass="auto-style2 asp-table" Height="37px" Width="1024px">
+            <asp:Table ID="storeInfo" runat="server"  CssClass="auto-style2 asp-table" Height="37px" Width="1024px" Onclick="GoSel(event)">
                 <asp:TableHeaderRow CssClass="header-font asp-table-header">
                     <asp:TableHeaderCell CssClass="table-bordered td text-center ">商品编号</asp:TableHeaderCell>
                     <asp:TableHeaderCell CssClass="table-bordered td text-center">名称</asp:TableHeaderCell>
                     <asp:TableHeaderCell CssClass="table-bordered td text-center">类型</asp:TableHeaderCell>
                     <asp:TableHeaderCell CssClass="table-bordered td text-center">数量</asp:TableHeaderCell>
                 </asp:TableHeaderRow>
-                <asp:TableRow CssClass="asp-table-normal">
-                     <asp:TableCell CssClass="table-bordered td text-center">123456</asp:TableCell>
-                     <asp:TableCell CssClass="table-bordered td text-center">123456</asp:TableCell>
-                     <asp:TableCell CssClass="table-bordered td text-center">123456</asp:TableCell>
-                     <asp:TableCell CssClass="table-bordered td text-center">123456</asp:TableCell>
-                </asp:TableRow>
             </asp:Table>
 
         </div>
- 
+        <asp:HiddenField ID="hide_goodsId" runat="server" />
+        <asp:HiddenField ID="hide_goodsType" runat="server" />
         <div id="footer" style="background-color:#ffffff;clear:both;text-align:center; border-top:groove;border-color:lightgray;">
         版权 © runoob.com</div>
     </form>
