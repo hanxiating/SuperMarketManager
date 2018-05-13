@@ -23,12 +23,12 @@
                     <asp:Image runat="server" Height="71px" ImageUrl="~/Source/market_3.png" Width="493px" />
                 </div>
                 <ul>
-                    <li><a href="Home.aspx">首页</a></li>
-                    <li><a href="Employee_1.aspx">员工管理</a></li>
-                    <li><a href="Supply.aspx">供应商管理</a></li>
-                    <li><a href="Store.aspx">库存管理</a></li>
-                    <li><a href="Sale.aspx">销售记录</a></li>
-                    <li><a href="login.aspx">退出</a></li>
+                   <li><a href="home.aspx">首页</a></li>
+                   <li><a href="Employee_1.aspx">员工管理</a></li>
+                   <li><a href="Supply.aspx">供应商管理</a></li>
+                   <li><a href="Store.aspx">库存管理</a></li>
+                   <li><a href="Sale.aspx">销售记录</a></li>
+                   <li><a href="login.aspx">退出</a></li>
                 </ul>
             </div>
         </div>

@@ -4,13 +4,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>员工管理</title>
+    <title>库存管理</title>
 
     <link href="../Content/view.css" type="text/css" rel="stylesheet"/>
     <link href="../Content/bootstrap.css" type="text/css" rel="stylesheet"/>
     <link href="../Content/bootstrap.min.css" type="text/css" rel="stylesheet"/>
     <link href="../Content/Site.css" type="text/css" rel="stylesheet"/>
-    <link href="../mmk_media/image/supermarket.png" type="text/css" rel="stylesheet"/>
+   <link href="../mmk_media/image/supermarket.png" type="text/css" rel="stylesheet"/>
 
     <style type="text/css">
         .auto-style1 {
@@ -63,15 +63,15 @@
         <div >
             <div class="nav navbar-inverse navbar-fixed-top">
                 <div class="market-title">
-                    <asp:Image runat="server" Height="71px" ImageUrl="~/mmk_media/image/market_3.png" Width="493px" />
+                    <asp:Image runat="server" Height="71px" ImageUrl="~/Source/market_3.png" Width="493px" />
                 </div>
                  <ul>
-                   <li><a href="Home.aspx">首页</a></li>
-                   <li><a href="Employee.aspx">员工管理</a></li>
-                   <li><a href="Suply.aspx">供应商管理</a></li>
+                   <li><a href="home.aspx">首页</a></li>
+                   <li><a href="Employee_1.aspx">员工管理</a></li>
+                   <li><a href="Supply.aspx">供应商管理</a></li>
                    <li><a href="Store.aspx">库存管理</a></li>
                    <li><a href="Sale.aspx">销售记录</a></li>
-                     <li><a href="login.aspx">退出</a></li>
+                    <li><a href="login.aspx">退出</a></li>
                  </ul>
             </div>
         </div>
@@ -91,9 +91,9 @@
             <div style="text-align:left;margin-top:15px;margin-left:70px;">
                 <asp:TextBox ID="search_text" runat="server" style="width:200px;height:30px;"></asp:TextBox>
 
-                <asp:Button ID="search_btn" runat="server" style="height:30px;width:50px;font-size:14px;" Text="搜索" OnClick="search_btn_Click"/>
-                <asp:Button ID="object_add" runat="server" Text="增加物品" class="btn_update" OnClick="object_add_Click" Width="59px"/>
-                <asp:Button ID="store_add" runat="server" Text="进货" class="btn_update" OnClick="store_add_Click"/>
+                <asp:Button ID="search_btn" runat="server" style="height:30px;width:50px;font-size:14px;" Text="搜索" />
+                <asp:Button ID="object_add" runat="server" Text="增加物品" style="height:30px;width:90px;margin-right:10px;margin-left:500px;" OnClick="object_add_Click" Width="59px"/>
+                <asp:Button ID="store_add" runat="server" Text="进货" class="btn_delete" OnClick="store_add_Click"/>
 
             </div><br />
            
