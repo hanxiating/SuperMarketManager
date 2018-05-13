@@ -77,13 +77,13 @@
         </div>
 
         <div id="menu" style="margin-left:15px;margin-top:75px;border-right:groove;" class="auto-style1">
-            <asp:Button ID="emp_all" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="全体员工" ></asp:Button>
+            <asp:Button ID="emp_all" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="全体员工" OnClick="emp_all_Click" ></asp:Button>
             <asp:Button ID="emp_HR" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="人事部" OnClick="emp_HR_Click"></asp:Button>
-            <asp:Button ID="emp_finacial" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="财务部"></asp:Button>
-            <asp:Button ID="emp_purches" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="采购部"></asp:Button>
-            <asp:Button ID="emp_service" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="客服部"></asp:Button>
-            <asp:Button ID="emp_rear" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="后勤部"></asp:Button>
-            <asp:Button ID="emp_back" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="返回"></asp:Button>
+            <asp:Button ID="emp_finacial" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="财务部" OnClick="emp_finacial_Click"></asp:Button>
+            <asp:Button ID="emp_purches" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="采购部" OnClick="emp_purches_Click"></asp:Button>
+            <asp:Button ID="emp_service" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="客服部" OnClick="emp_service_Click"></asp:Button>
+            <asp:Button ID="emp_rear" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="后勤部" OnClick="emp_rear_Click"></asp:Button>
+            <asp:Button ID="emp_back" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="返回" OnClick="emp_back_Click"></asp:Button>
         </div>
 
         <div id="content" style="width:80%;float:left;margin-left:20px;margin-top:70px;">
