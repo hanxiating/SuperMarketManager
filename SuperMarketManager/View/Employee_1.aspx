@@ -66,7 +66,7 @@
                     <asp:Image runat="server" Height="71px" ImageUrl="~/Source/market_3.png" Width="493px" />
                 </div>
                  <ul>
-                   <li><a href="Home.aspx">首页</a></li>
+                   <li><a href="home.aspx">首页</a></li>
                    <li><a href="Employee_1.aspx">员工管理</a></li>
                    <li><a href="Supply.aspx">供应商管理</a></li>
                    <li><a href="Store.aspx">库存管理</a></li>
@@ -94,7 +94,7 @@
                 
                 <asp:Button ID="emp_add" runat="server" Text="添加员工" style="height:30px;width:90px;margin-right:10px;margin-left:500px;" OnClick="emp_add_Click"/>
                 <asp:Button ID="emp_update" runat="server" Text="修改" style="height:30px;width:50px;" OnClick="emp_update_Click" />
-                <asp:Button ID="emp_delete" runat="server" Text="删除" class="btn_delete" OnClick="emp_delete_Click"/>
+                <asp:Button ID="emp_delete" runat="server" Text="删除" class="btn_delete" OnClick="emp_delete_Click1"/>
 
             </div><br />
            

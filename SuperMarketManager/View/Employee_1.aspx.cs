@@ -13,7 +13,7 @@ namespace SuperMarketManager.View
     {
         EmployeeService empService = new EmployeeService();
         Button bButton = new Button();
-        public string emp_id = "";
+        public static string emp_id = "";
         //int ID=0;//记录操作对象员的员工号
         //RadioButton select = new RadioButton();
        
@@ -203,47 +203,23 @@ namespace SuperMarketManager.View
         {
             //HiddenFieldMark.Value = "HR"; //做个标记表示点击了aButton
             List<Model.Employee> emp_list = empService.GetEmployeeByPartId(ConstantValue.HR);
-            add_employee(emp_list);
-            this.hide_part.Value ="0";
+            if (emp_list != null)
+                add_employee(emp_list);
+            this.hide_part.Value = "0";
         }
-
-        protected void emp_delete_Click(object sender, EventArgs e)
-        {
-            //TableRow row;
-            //TableCell cell;
-            // row = new TableRow();
-            //cell = new TableCell();
-            //cell.CssClass = "table-bordered td text-center";
-            // Label test = new Label();
-            // test.Text = "test";
-            // cell.Controls.Add(test);
-            // row.Cells.Add(cell);
-            // employeeInfo.Rows.Add(row);
-
-            //employeeInfo.Rows.RemoveAt(10);
-            //empService.DeleteEmployee(10);
-            //根据button的选中状态记录ID和当前部门
-            // int ID = int.Parse(lab_test.Text);
-            int value = int.Parse(this.hide.Value);
-            int part = int.Parse(this.hide_part.Value);
-            //string depart = this.hide_part.Value;
-            //if (depart.Equals("人事部")) part = 0;
-            // if (depart.Equals("财务部")) part = 1;
-           // else if (depart.Equals("采购部")) part = 2;
-           // else if (depart.Equals("客服部")) part = 3;
-           // else if (depart.Equals("后勤部")) part = 4;
-           // else part = 5;
-            
-            empService.DeleteEmployee(value);
-            List<Model.Employee> emp_list = empService.GetEmployeeByPartId(part);
-            add_employee(emp_list);
-        }
+        
         //根据员工姓名或者ID搜索员工
         protected void search_btn_Click(object sender, EventArgs e)
         {
             string emp=search_text.Text.Trim();
             List<Model.Employee> emp_list = new List<Model.Employee>();
-            int part = int.Parse(this.hide_part.Value);
+            string p=this.hide_part.Value;
+            int part=5; //默认是全部部门
+            if (p.Equals("人事部")) part = 0;
+            else if (p.Equals("财务部")) part = 1;
+            else if (p.Equals("采购部")) part = 2;
+            else if (p.Equals("客服部")) part = 3;
+            else if (p.Equals("后勤部")) part = 4;
             //判断是否为纯数字
             string pattern =@"^\d*$";
             if (System.Text.RegularExpressions.Regex.IsMatch(emp,pattern))
@@ -254,8 +230,8 @@ namespace SuperMarketManager.View
             else
 
                 emp_list = empService.GetEmployeeByPartName(part, emp);
-
-            add_employee(emp_list);
+            if (emp_list != null)
+                add_employee(emp_list);
         }
 
         protected void emp_add_Click(object sender, EventArgs e)
@@ -312,6 +288,25 @@ namespace SuperMarketManager.View
         {
             emp_id = this.hide.Value;
             Response.Write("<script language='javascript'>window.open('" + "Dialog_update.aspx" + "','','height=400,width=430, resizable=1,scrollbars=0,status=1,menubar=no,toolbar=no,location=yes,menu=no,left=" + emp_update.Style["left"] + " , top=" + emp_update.Style["top"] + "');</script>");
+        }
+
+        protected void emp_delete_Click1(object sender, EventArgs e)
+        {
+            int id = int.Parse(this.hide.Value);
+            string p = this.hide_part.Value;
+            int part = 5; //默认是全部部门
+            if (p.Equals("人事部")) part = 0;
+            else if (p.Equals("财务部")) part = 1;
+            else if (p.Equals("采购部")) part = 2;
+            else if (p.Equals("客服部")) part = 3;
+            else if (p.Equals("后勤部")) part = 4;
+            Response.Write("<script>alert('确定删除？')</script>");
+            if(empService.DeleteEmployee(id))
+            {
+                List<Model.Employee> emp_list = empService.GetEmployeeByPartId(part);
+                if (emp_list != null)
+                    add_employee(emp_list);
+            }
         }
     }
 }

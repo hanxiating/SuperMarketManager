@@ -284,6 +284,9 @@
     <Content Include="mmk_media\image\logo_small_gray.png" />
     <Content Include="mmk_media\image\market_1.png" />
     <Content Include="mmk_media\image\market_2.png" />
+    <Content Include="Source\home\home1.jpg" />
+    <Content Include="Source\home\home2.jpg" />
+    <Content Include="Source\home\home3.jpg" />
     <Content Include="Source\market_3.png" />
     <Content Include="mmk_media\image\message.png" />
     <Content Include="mmk_media\image\more_unfold.png" />
