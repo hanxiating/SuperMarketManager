@@ -51,6 +51,7 @@ namespace SuperMarketManager.View
         {
             //向后台提供采购货物的id，采购数量
             purchaseService.AddSales(int.Parse(Store.goodsId),int.Parse(TextBox1.Text.Trim()));
+            Response.Write("<script>alert('进货成功')</script>");
         }
 
         

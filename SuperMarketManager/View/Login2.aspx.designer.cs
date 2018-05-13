@@ -7,10 +7,10 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace WebApplication1 {
+namespace SuperMarketManager.View {
     
     
-    public partial class login {
+    public partial class WebForm6 {
         
         /// <summary>
         /// form1 控件。
