@@ -17,10 +17,10 @@ namespace SuperMarketManager.Model
         {
             Sales sales = new Sales();
             sales.Id = (int)dic["id"];
-            sales.GoodsId = (int)dic["good_id"];
+            sales.GoodsId = (int)dic["goods_id"];
             sales.Number = (int)dic["number"];
             sales.Cost = (float)dic["cost"];
-            sales.Time = (long)dic["cost"];
+            sales.Time = (long)dic["time"];
             return sales;
         }
     }
