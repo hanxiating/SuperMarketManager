@@ -23,7 +23,6 @@ namespace SuperMarketManager.Model
         public const int STATIONARY = 4;
         public const int OTHERS = 5;
 
-        public void aa()
-        { }
+       
     }
 }
