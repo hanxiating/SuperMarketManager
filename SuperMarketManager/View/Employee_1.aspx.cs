@@ -253,6 +253,11 @@ namespace SuperMarketManager.View
 
             add_employee(emp_list);
         }
+
+        protected void emp_add_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     
