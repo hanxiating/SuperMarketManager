@@ -7,6 +7,11 @@
     {
         Response.Write("订单提交成功！");
     }
+
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        ClientScript.RegisterStartupScript(Page.GetType(), "", "<script language=javascript>window.opener=null;window.open('','_self');window.close();</script>");
+    }
 </script>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -64,7 +69,7 @@
             <tr>
                 <td>
                     <asp:Button ID="Button1" runat="server" Text="确认" OnClick="Button1_Click" />
-                    <asp:Button ID="Button2" runat="server" Text="取消" />
+                    <asp:Button ID="Button2" runat="server" Text="取消" OnClick="Button2_Click" />
                 </td>
                 
             </tr>

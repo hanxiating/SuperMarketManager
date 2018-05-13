@@ -13,6 +13,8 @@ namespace SuperMarketManager.Service
         private const String SELECT_SUPPLIER_BY_ID = "select * from supplier where id={0}";
         private const String SELECT_ALL_SUPPLIER = "select * from supplier";
 
+        private const String SELECT_SUPPLIER_BY_GOODS_TYPE = "select distinct supplier.* from supplier,goods,goods_supplier where goods.type={0} AND goods.id=goods_supplier.goods_id AND goods_supplier.supplier_id=supplier.id";
+
         //添加供应商
         public int AddSupplier(Supplier supplier)
         {
@@ -60,5 +62,22 @@ namespace SuperMarketManager.Service
             }
         }
 
+        public List<Supplier> GetSuppliersForGoodsType(int goods_type)
+        {
+            List<Dictionary<String, Object>> sqlResult = DatabaseTool.ExecSqlWithReturn(String.Format(SELECT_SUPPLIER_BY_GOODS_TYPE, goods_type));
+            if (null == sqlResult || sqlResult.Count < 1)
+            {
+                return null;
+            }
+            else
+            {
+                List<Supplier> suppliers = new List<Supplier>();
+                foreach (Dictionary<String, Object> dic in sqlResult)
+                {
+                    suppliers.Add(Supplier.CreateSupplier(dic));
+                }
+                return suppliers;
+            }
+        }
     }
 }

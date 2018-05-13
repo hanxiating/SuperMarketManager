@@ -13,8 +13,13 @@
             <table style="width:100%;">
                 <tr>
                     <td>
-                        <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
-                            <asp:ListItem></asp:ListItem>
+                        &nbsp;</td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <asp:DropDownList ID="DropDownList1" runat="server"  Height="16px">
+                            <asp:ListItem>请选择供应商</asp:ListItem>
                         </asp:DropDownList>
                         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                     </td>
@@ -23,7 +28,7 @@
                 <tr>
                     <td>
                         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="确定" />
-                        <asp:Button ID="Button2" runat="server" Text="取消" />
+                        <asp:Button ID="Button2" runat="server" Text="取消" OnClick="Button2_Click" />
                     </td>
                     
                 </tr>

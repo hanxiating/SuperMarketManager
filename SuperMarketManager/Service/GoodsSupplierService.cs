@@ -34,9 +34,14 @@ namespace SuperMarketManager.Service
         }
 
         //添加货物—供应商
-        public bool AddPart(int goods_id, int supplier_id, float price)
+        public bool AddGoodsSupplier(int goods_id, int supplier_id, float price)
         {
             return DatabaseTool.ExecSql(String.Format(INSERT_GOODS_SUPPLIER_SQL, goods_id, supplier_id, price));
+        }
+
+        public bool AddGoodsSupplier(int goods_id, int supplier_id)
+        {
+            return AddGoodsSupplier(goods_id, supplier_id, 100);
         }
 
         //根据id查询查询供应商信息

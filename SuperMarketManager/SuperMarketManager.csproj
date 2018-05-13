@@ -283,7 +283,6 @@
     <Content Include="mmk_media\image\logo_small_gray.png" />
     <Content Include="mmk_media\image\market_1.png" />
     <Content Include="mmk_media\image\market_2.png" />
-    <Content Include="Scripts\test\aspTable.js" />
     <Content Include="Source\market_3.png" />
     <Content Include="mmk_media\image\message.png" />
     <Content Include="mmk_media\image\more_unfold.png" />
@@ -343,8 +342,12 @@
     <Content Include="Source\fruit\pineaple.png" />
     <Content Include="Source\fruit\strawberrey.jpg" />
     <Content Include="Source\others\图片2.png" />
+    <Content Include="Source\supermarket\supermarket1.jpg" />
+    <Content Include="Source\supermarket\supermarket2.jpg" />
+    <Content Include="Source\supermarket\supermarket3.jpg" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="View\Dialog_order.aspx" />
+    <Content Include="View\home.aspx" />
     <Content Include="View\login.aspx" />
     <Content Include="View\Main_Customer.aspx" />
     <Content Include="View\Main_Manager.aspx" />
@@ -358,6 +361,7 @@
     <Content Include="View\Dialog_add_goods.aspx" />
     <Content Include="View\Dialog_input.aspx" />
     <Content Include="View\Buy.aspx" />
+    <Content Include="View\Dialog_update.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -436,13 +440,6 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="View\Buy.aspx.cs">
-      <DependentUpon>Buy.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="View\Buy.aspx.designer.cs">
-      <DependentUpon>Buy.aspx</DependentUpon>
-    </Compile>
     <Compile Include="View\Dialog_add_employee.aspx.cs">
       <DependentUpon>Dialog_add_employee.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -477,6 +474,13 @@
     </Compile>
     <Compile Include="View\Employee_1.aspx.designer.cs">
       <DependentUpon>Employee_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
@@ -513,10 +517,18 @@
     <Compile Include="View\Supply.aspx.designer.cs">
       <DependentUpon>Supply.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\test_1.aspx.cs">
+      <DependentUpon>test_1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\test_1.aspx.designer.cs">
+      <DependentUpon>test_1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="Scripts\test\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
