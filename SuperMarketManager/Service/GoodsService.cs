@@ -93,13 +93,14 @@ namespace SuperMarketManager.Service
         private List<Goods> GetGoodsList(String sql)
         {
             List<Dictionary<String, Object>> sqlResult = DatabaseTool.ExecSqlWithReturn(sql);
+            List<Goods> goods = new List<Goods>();
             if (null == sqlResult || sqlResult.Count < 1)
             {
-                return null;
+                return goods;
             }
             else
             {
-                List<Goods> goods = new List<Goods>();
+                
                 foreach (Dictionary<String, Object> dic in sqlResult)
                 {
                     goods.Add(Goods.CreateGoods(dic));
