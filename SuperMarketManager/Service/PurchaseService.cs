@@ -41,6 +41,7 @@ namespace SuperMarketManager.Service
                     result= DatabaseTool.ExecSql(String.Format(INSERT_PURCHASE_SQL, purchase.GoodsSupplierId, purchase.Number, time));
 
             }
+            
             return result;
         }
 
