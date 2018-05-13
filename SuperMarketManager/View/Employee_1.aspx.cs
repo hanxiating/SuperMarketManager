@@ -256,7 +256,7 @@ namespace SuperMarketManager.View
 
         protected void emp_add_Click(object sender, EventArgs e)
         {
-
+            Response.Write("<script language='javascript'>window.open('" + "Dialog_add_employee.aspx" + "','','height=400,width=430, resizable=1,scrollbars=0,status=1,menubar=no,toolbar=no,location=yes,menu=no,left=" + emp_add.Style["left"] + " , top=" + emp_add.Style["top"] + "');</script>");
         }
 
         protected void emp_all_Click(object sender, EventArgs e)
@@ -297,6 +297,11 @@ namespace SuperMarketManager.View
         protected void emp_back_Click(object sender, EventArgs e)
         {
             Response.Redirect("home.aspx");
+        }
+
+        protected void emp_update_Click(object sender, EventArgs e)
+        {
+            Response.Write("<script language='javascript'>window.open('" + "Dialog_update.aspx" + "','','height=400,width=430, resizable=1,scrollbars=0,status=1,menubar=no,toolbar=no,location=yes,menu=no,left=" + emp_update.Style["left"] + " , top=" + emp_update.Style["top"] + "');</script>");
         }
     }
 }

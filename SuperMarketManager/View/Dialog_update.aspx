@@ -46,7 +46,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style1">所在部门</td>
-                    <td><asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+                    <td><asp:DropDownList ID="DropDownList1" runat="server">
                                         <asp:ListItem Selected="True" Value="5">请选择部门</asp:ListItem>
                                         <asp:ListItem Value="0">人事部</asp:ListItem>
                                         <asp:ListItem Value="1">财务部</asp:ListItem>
