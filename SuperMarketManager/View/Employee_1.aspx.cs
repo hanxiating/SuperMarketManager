@@ -13,6 +13,7 @@ namespace SuperMarketManager.View
     {
         EmployeeService empService = new EmployeeService();
         Button bButton = new Button();
+        public string emp_id = "";
         //int ID=0;//记录操作对象员的员工号
         //RadioButton select = new RadioButton();
        
@@ -261,36 +262,41 @@ namespace SuperMarketManager.View
 
         protected void emp_all_Click(object sender, EventArgs e)
         {
-            List<Model.Employee> emp_list = empService.GetEmployeeByPartId(ConstantValue.ALL_PART);
-            add_employee(emp_list);
+            List<Model.Employee> emp_list = empService.GetAllEmployee();
+            if (emp_list != null)
+                add_employee(emp_list);
             this.hide_part.Value = "5";
         }
 
         protected void emp_finacial_Click(object sender, EventArgs e)
         {
-            List<Model.Employee> emp_list = empService.GetEmployeeByPartId(ConstantValue.FINANCE);
-            add_employee(emp_list);
+            List<Model.Employee> emp_list = empService.GetEmployeeByPartId(ConstantValue.FINANCE);          
+            if(emp_list!=null)
+                add_employee(emp_list);
             this.hide_part.Value = "1";
-        }
+        }       
 
         protected void emp_purches_Click(object sender, EventArgs e)
         {
             List<Model.Employee> emp_list = empService.GetEmployeeByPartId(ConstantValue.PURCHASE);
-            add_employee(emp_list);
+            if (emp_list != null)
+                add_employee(emp_list);
             this.hide_part.Value = "2";
         }
 
         protected void emp_service_Click(object sender, EventArgs e)
         {
             List<Model.Employee> emp_list = empService.GetEmployeeByPartId(ConstantValue.SERVICE);
-            add_employee(emp_list);
+            if (emp_list != null)
+                add_employee(emp_list);
             this.hide_part.Value = "3";
         }
 
         protected void emp_rear_Click(object sender, EventArgs e)
         {
             List<Model.Employee> emp_list = empService.GetEmployeeByPartId(ConstantValue.LOGISTICS);
-            add_employee(emp_list);
+            if (emp_list != null)
+                add_employee(emp_list);
             this.hide_part.Value = "4";
         }
 
@@ -301,6 +307,7 @@ namespace SuperMarketManager.View
 
         protected void emp_update_Click(object sender, EventArgs e)
         {
+            emp_id = this.hide.Value;
             Response.Write("<script language='javascript'>window.open('" + "Dialog_update.aspx" + "','','height=400,width=430, resizable=1,scrollbars=0,status=1,menubar=no,toolbar=no,location=yes,menu=no,left=" + emp_update.Style["left"] + " , top=" + emp_update.Style["top"] + "');</script>");
         }
     }
