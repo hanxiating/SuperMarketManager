@@ -18,6 +18,9 @@ namespace SuperMarketManager.Service
 
         private const String DELETE_EMPLOYEE_BY_ID = "delete from employee where id={0}";
         //private const String SELECT_EMPLOYEE_BY_PART_NAME = "select * from employee where part_id={0} and name={1}";
+
+        private const String SELECT_ALL_EMPLOYEE = "select * from employee";
+
         public bool AddEmployee(Employee employee)
         {
             return AddEmployee(employee.Name, employee.Phone, employee.Sex, employee.PartId);
@@ -35,6 +38,24 @@ namespace SuperMarketManager.Service
         public bool DeleteEmployee(int id)
         {
             return DatabaseTool.ExecSql(String.Format(DELETE_EMPLOYEE_BY_ID,id));
+        }
+
+        public List<Employee> GetAllEmployees()
+        {
+            List<Dictionary<String, Object>> result = DatabaseTool.ExecSqlWithReturn(SELECT_ALL_EMPLOYEE);
+            if (null == result || result.Count < 1)
+            {
+                return null;
+            }
+            else
+            {
+                List<Employee> employees = new List<Employee>();
+                foreach (Dictionary<String, Object> dic in result)
+                {
+                    employees.Add(Employee.CreateEmployee(dic));
+                }
+                return employees;
+            }
         }
 
         public List<Employee> GetEmployeeByPartId(int partId)

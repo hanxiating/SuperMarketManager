@@ -362,6 +362,7 @@
     <Content Include="View\Dialog_input.aspx" />
     <Content Include="View\Buy.aspx" />
     <Content Include="View\Dialog_update.aspx" />
+    <Content Include="View\test_1.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

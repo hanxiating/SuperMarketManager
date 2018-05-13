@@ -15,7 +15,8 @@ namespace SuperMarketManager.View
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           // new GoodsService().AddGoods("水果",0,15,3,1,5,1);
+          //  new GoodsSupplierService().AddGoodsSupplier(2,1);
         }
 
         protected override void OnInit(EventArgs e)
