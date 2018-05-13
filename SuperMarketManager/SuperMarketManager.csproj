@@ -283,6 +283,7 @@
     <Content Include="mmk_media\image\logo_small_gray.png" />
     <Content Include="mmk_media\image\market_1.png" />
     <Content Include="mmk_media\image\market_2.png" />
+    <Content Include="Scripts\test\aspTable.js" />
     <Content Include="Source\market_3.png" />
     <Content Include="mmk_media\image\message.png" />
     <Content Include="mmk_media\image\more_unfold.png" />
@@ -476,41 +477,6 @@
     </Compile>
     <Compile Include="View\test_1.aspx.designer.cs">
       <DependentUpon>test_1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="View\Dialog_add_employee.aspx.cs">
-      <DependentUpon>Dialog_add_employee.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="View\Dialog_add_employee.aspx.designer.cs">
-      <DependentUpon>Dialog_add_employee.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="View\Dialog_add_supply.aspx.cs">
-      <DependentUpon>Dialog_add_supply.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="View\Dialog_add_supply.aspx.designer.cs">
-      <DependentUpon>Dialog_add_supply.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="View\Dialog_add_goods.aspx.cs">
-      <DependentUpon>Dialog_add_goods.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="View\Dialog_add_goods.aspx.designer.cs">
-      <DependentUpon>Dialog_add_goods.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="View\Dialog_input.aspx.cs">
-      <DependentUpon>Dialog_input.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="View\Dialog_input.aspx.designer.cs">
-      <DependentUpon>Dialog_input.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="View\Buy.aspx.cs">
-      <DependentUpon>Buy.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="View\Buy.aspx.designer.cs">
-      <DependentUpon>Buy.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
