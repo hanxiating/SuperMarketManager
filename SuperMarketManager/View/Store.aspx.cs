@@ -29,7 +29,7 @@ namespace SuperMarketManager.View
         protected void store_add_Click(object sender, EventArgs e)
         {
             goodsId = this.hide_goodsId.Value;
-            Response.Write("<script language='javascript'>window.open('" + "Dialog_input.aspx" + "','','height=400,width=430, resizable=1,scrollbars=0,status=1,menubar=no,toolbar=no,location=yes,menu=no,left=" + store_add.Style["left"] + " , top=" + store_add.Style["top"] + "');</script>");
+            Response.Write("<script language='javascript'>window.open('" + "Dialog_input.aspx?goods_id="+ goodsId + "','','height=400,width=430, resizable=1,scrollbars=0,status=1,menubar=no,toolbar=no,location=yes,menu=no,left=" + store_add.Style["left"] + " , top=" + store_add.Style["top"] + "');</script>");
         }
 
         protected void object_add_Click(object sender, EventArgs e)

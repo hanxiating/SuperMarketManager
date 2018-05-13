@@ -12,7 +12,7 @@ namespace SuperMarketManager.Service
         private const String SELECT_GOODSSUPPLIERS_BY_GOODSID = "select * from goods_supplier where goods_id={0}";
         private const String INSERT_GOODS_SUPPLIER_SQL = "insert into goods_supplier(goods_id,supplier_id,price) values({0},{1},{2})";
         private const String SELECT_SUPPLIERS_BY_ID = "select * from goods_supplier where id={0}";
-        private const String SELECT_SUPPLIERS_BY_GOODSID = "select * from supplier where id=(select supplier_id from goods_supplier where goods_id={0})";
+        private const String SELECT_SUPPLIERS_BY_GOODSID = "select supplier.* from supplier,goods_supplier where goods_supplier.goods_id={0} AND goods_supplier.supplier_id=supplier.id";
         
         //根据goods_id查询货物_供应商信息
         public List<GoodsSupplier> GetGoodsSuppliers(int goods_id)

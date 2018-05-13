@@ -66,13 +66,13 @@
         </div>
 
         <div id="menu" style="margin-left:15px;margin-top:75px;border-right:groove;" class="auto-style1">
-            <asp:Button ID="client_all" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="Hot!" ></asp:Button>
             <asp:Button ID="client_food" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="食品" OnClick="client_food_Click" ></asp:Button>
-            <asp:Button ID="client_fruit" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="水果"></asp:Button>
-            <asp:Button ID="client_use" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="日用品"></asp:Button>
-            <asp:Button ID="client_drink" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="饮料"></asp:Button>
-            <asp:Button ID="client_wenju" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="文具"></asp:Button>
-            <asp:Button ID="client_other" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="其他"></asp:Button>
+            <asp:Button ID="client_fruit" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="水果" OnClick="client_fruit_Click"></asp:Button>
+            <asp:Button ID="client_use" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="日用品" OnClick="client_use_Click"></asp:Button>
+            <asp:Button ID="client_drink" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="饮料" OnClick="client_drink_Click"></asp:Button>
+            <asp:Button ID="client_wenju" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="文具" OnClick="client_wenju_Click"></asp:Button>
+            <asp:Button ID="client_other" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="其他" OnClick="client_other_Click"></asp:Button>
+            <asp:Button ID="back" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="返回" OnClick="back_Click"></asp:Button>
         </div>
 
         <div id="content" style="width:80%;float:left;margin-left:20px;margin-top:70px;">
@@ -80,6 +80,8 @@
 
                 
                 <asp:Button ID="order" runat="server" Text="提交订单" OnClick="order_Click"  />
+
+                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
 
             </div><br />
            

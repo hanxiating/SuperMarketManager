@@ -16,47 +16,94 @@ namespace SuperMarketManager.View
         SalesService salesService = new SalesService();
         public static int count;
         public static List<TextBox> tb = new List<TextBox>();
+        public static List<Model.Goods> client_list;
+
+        int op = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           // Label1.Text = "";
+            add_client(client_list);
+            if (Session["op"] != null)
+            {
+                op = Int32.Parse((String)Session["op"]);
+                Session.Remove("op");
+            }
+            else
+            {
+                op = 0;
+            }
+            
+            switch (op)
+            {
+                case 0:
+                    Label1.Text = "";
+                    break;
+                case 1:Label1.Text = "购买成功!";
+                    break;
+                case 2:
+                    Label1.Text = "购买失败";
+                    break;
+            }
         }
 
         protected void order_Click(object sender, EventArgs e)
         {
             //int count = orderInfo.
             List<Model.Sales> order_list = new List<Sales>();
-            Sales sales = new Sales();
-            for (int i = 0; i < count; i++)
+            int num = client_list.Count;
+            
+
+
+
+            for (int i = 0; i < client_list.Count; i++)
             {
-                TextBox textBox = (TextBox)this.FindControl("number" + i.ToString());
-               // this.hide_number.Value = textBox.Text;
-                int number = int.Parse(textBox.Text);
+                //(TextBox)orderInfo.FindControl("number" + i.ToString());
+                // this.hide_number.Value = textBox.Text;
+                String va = Request["number"+i];
+                if (va == null || va.Equals(""))
+                {
+                    break;
+                }
+                int number = int.Parse(va);
+
                 if (number > 0)
                 {
-                    int id = int.Parse(orderInfo.Rows[i].Cells[0].Text);
-                    int price = int.Parse(orderInfo.Rows[i].Cells[2].Text);
-                    sales.Id = id;
+                    Sales sales = new Sales();
+                    sales.GoodsId = client_list[i].Id;
                     sales.Number = number;
-                    sales.Cost = number * price;
+                    sales.Cost = number * client_list[i].Price;
                     order_list.Add(sales);
                 }
             }
             //提交成功,网页提示
-            if(salesService.AddSales(order_list))
-                Response.Write("<script>alert('订单提交成功！')</script>");
+            if (salesService.AddSales(order_list))
+            {
+                op = 1;
+            }
+            else
+            {
+                op = 2;
+            }
+            Session["op"] = op+"";
+            Response.Redirect("Orders");
         }
 
         //获取食品列表
         protected void client_food_Click(object sender, EventArgs e)
         {
-            List<Model.Goods> client_list = goodsService.GetGoodsByTypeId(ConstantValue.FOOD);
-            add_client(client_list);
-            this.hide_type.Value = "0";
+            LoadData(ConstantValue.FOOD);
         }
 
         public void add_client(List<Model.Goods> client_list)
         {
+            orderInfo.Rows.Clear();
+            orderInfo.Rows.Add(CreateHeader());
+
+            if (null == client_list)
+            {
+                return;
+            }
             count = client_list.Count;
             TableRow row;
             TableCell cell;
@@ -96,14 +143,93 @@ namespace SuperMarketManager.View
                 cell = new TableCell();
                 cell.CssClass = "table-bordered td text-center";
                 TextBox number= new TextBox();
-                number.Text = "0";
+                number.AutoPostBack = true;
+                //number.Text = "0";
                 number.ID = "number" + i;
+                
                 tb.Add(number);
                 cell.Controls.Add(number);
                 row.Cells.Add(cell);
 
                 orderInfo.Rows.Add(row);
             }
+        }
+        private TableHeaderRow CreateHeader()
+        {
+            TableHeaderRow tableHeaderRow = new TableHeaderRow();
+            tableHeaderRow.CssClass = "header-font asp-table-header";
+            TableHeaderCell tableHeaderCell = new TableHeaderCell();
+            tableHeaderCell.Text = "商品编号";
+            tableHeaderCell.CssClass = "table-bordered td text-center";
+            tableHeaderRow.Controls.Add(tableHeaderCell);
+
+            tableHeaderCell = new TableHeaderCell();
+            tableHeaderCell.Text = "商品名";
+            tableHeaderCell.CssClass = "table-bordered td text-center";
+            tableHeaderRow.Controls.Add(tableHeaderCell);
+
+            tableHeaderCell = new TableHeaderCell();
+            tableHeaderCell.Text = "售价";
+            tableHeaderCell.CssClass = "table-bordered td text-center";
+            tableHeaderRow.Controls.Add(tableHeaderCell);
+
+            tableHeaderCell = new TableHeaderCell();
+            tableHeaderCell.CssClass = "table-bordered td text-center";
+            
+            tableHeaderCell.Text = "购买量";
+            tableHeaderRow.Controls.Add(tableHeaderCell);
+
+            return tableHeaderRow;
+        }
+
+        protected void client_fruit_Click(object sender, EventArgs e)
+        {
+            LoadData( ConstantValue.FRUIT);
+        }
+
+        protected void client_use_Click(object sender, EventArgs e)
+        {
+            LoadData(ConstantValue.DAILYUSE );
+        }
+
+        protected void client_drink_Click(object sender, EventArgs e)
+        {
+            LoadData(ConstantValue.DRINK);
+        }
+
+        protected void client_wenju_Click(object sender, EventArgs e)
+        {
+            LoadData(ConstantValue.STATIONARY);
+        }
+        private void LoadData(int type)
+        {
+            client_list = goodsService.GetGoodsByTypeId(type);
+            add_client(client_list);
+            this.hide_type.Value = type + "";
+            op = 0;
+            switch (op)
+            {
+                case 0:
+                    Label1.Text = "";
+                    break;
+                case 1:
+                    Label1.Text = "购买成功!";
+                    break;
+                case 2:
+                    Label1.Text = "购买失败";
+                    break;
+            }
+        }
+
+        protected void client_other_Click(object sender, EventArgs e)
+        {
+            LoadData(ConstantValue.OTHERS);
+        }
+
+        protected void back_Click(object sender, EventArgs e)
+        {
+            Response.Write("<script language='javascript'>window.location='login.aspx'</script>");
+
         }
     }
 }

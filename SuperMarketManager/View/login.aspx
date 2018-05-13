@@ -98,6 +98,7 @@
                             <td style="text-align: left" class="auto-style3">
                                 <asp:Button ID="Button2" runat="server" style="text-align: center" 
                                     Text="重置" Height="26px" Width="93px" onclick="Button2_Click" />
+                                <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="销售" />
                             </td>
                             <td>
                                 &nbsp;</td>

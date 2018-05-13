@@ -49,7 +49,7 @@ namespace SuperMarketManager.Service
         public bool AddSales(int goods_supplier_id, int number)
         {
             long time = TimeUtils.GetCurrentTimeUnix();
-            if(new GoodsService().PurchaseGoods(new GoodsSupplierService().GetGoodsSupplierById(goods_supplier_id).GoodsId,number))
+            if(new GoodsService().PurchaseGoods(goods_supplier_id,number))
             return DatabaseTool.ExecSql(String.Format(INSERT_PURCHASE_SQL, goods_supplier_id, number, time));
             return false;
         }

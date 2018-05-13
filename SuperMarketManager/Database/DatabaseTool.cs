@@ -28,7 +28,11 @@ namespace SuperMarketManager.Database
         public static int GetLastInsertId()
         {
             MySqlCommand command = new MySqlCommand("SELECT LAST_INSERT_ID()", GetSqlConnection());
-            return command.ExecuteNonQuery();
+            MySqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+            int result= reader.GetInt32(0);
+            reader.Close();
+            return  result;
         }
         public static List<Dictionary<String, Object>> ExecSqlWithReturn(String sql)
         {

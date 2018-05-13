@@ -22,15 +22,6 @@ namespace SuperMarketManager.View {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// client_all 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button client_all;
-        
-        /// <summary>
         /// client_food 控件。
         /// </summary>
         /// <remarks>
@@ -85,6 +76,15 @@ namespace SuperMarketManager.View {
         protected global::System.Web.UI.WebControls.Button client_other;
         
         /// <summary>
+        /// back 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button back;
+        
+        /// <summary>
         /// order 控件。
         /// </summary>
         /// <remarks>
@@ -92,6 +92,15 @@ namespace SuperMarketManager.View {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button order;
+        
+        /// <summary>
+        /// Label1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
         /// ScriptManager1 控件。
