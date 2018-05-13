@@ -64,7 +64,7 @@ namespace SuperMarketManager.Service
 
         public List<Supplier> GetSuppliersForGoodsType(int goods_type)
         {
-            List<Dictionary<String, Object>> sqlResult = DatabaseTool.ExecSqlWithReturn(String.Format(SELECT_SUPPLIER_BY_GOODS_TYPE,goods_type));
+            List<Dictionary<String, Object>> sqlResult = DatabaseTool.ExecSqlWithReturn(String.Format(SELECT_SUPPLIER_BY_GOODS_TYPE, goods_type));
             if (null == sqlResult || sqlResult.Count < 1)
             {
                 return null;
@@ -78,5 +78,6 @@ namespace SuperMarketManager.Service
                 }
                 return suppliers;
             }
+        }
     }
 }
