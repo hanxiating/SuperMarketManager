@@ -14,6 +14,9 @@ namespace SuperMarketManager.View
     {
         GoodsService goodsService = new GoodsService();
         SalesService salesService = new SalesService();
+        public static int count;
+        public static List<TextBox> tb = new List<TextBox>();
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -21,14 +24,15 @@ namespace SuperMarketManager.View
 
         protected void order_Click(object sender, EventArgs e)
         {
-            int count = orderInfo.Rows.Count;
+            //int count = orderInfo.
             List<Model.Sales> order_list = new List<Sales>();
             Sales sales = new Sales();
             for (int i = 0; i < count; i++)
             {
-                this.hide_number.Value = orderInfo.Rows[i].Cells[3].Text;
-                int number = int.Parse(this.hide_number.Value);
-                if(number > 0)
+                TextBox textBox = (TextBox)this.FindControl("number" + i.ToString());
+               // this.hide_number.Value = textBox.Text;
+                int number = int.Parse(textBox.Text);
+                if (number > 0)
                 {
                     int id = int.Parse(orderInfo.Rows[i].Cells[0].Text);
                     int price = int.Parse(orderInfo.Rows[i].Cells[2].Text);
@@ -53,7 +57,7 @@ namespace SuperMarketManager.View
 
         public void add_client(List<Model.Goods> client_list)
         {
-            int count = client_list.Count;
+            count = client_list.Count;
             TableRow row;
             TableCell cell;
             int k = 0;
@@ -93,6 +97,8 @@ namespace SuperMarketManager.View
                 cell.CssClass = "table-bordered td text-center";
                 TextBox number= new TextBox();
                 number.Text = "0";
+                number.ID = "number" + i;
+                tb.Add(number);
                 cell.Controls.Add(number);
                 row.Cells.Add(cell);
 
