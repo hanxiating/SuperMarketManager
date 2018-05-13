@@ -33,10 +33,10 @@
         </div>
     </form>
     <div style="margin-top: 50px;background-color:black;">
-        <marquee direction="left" truespeed scrollamount="1500" scrolldelay="3000" onmouseover="this.stop();" onmouseout="this.start();">
-            <asp:Image runat="server" Width="1500" ImageUrl="~/Source/supermarket/supermarket1.jpg" />
-            <asp:Image runat="server" Width="1500" ImageUrl="~/Source/supermarket/supermarket2.jpg" />
-            <asp:Image runat="server" Width="1500" ImageUrl="~/Source/supermarket/supermarket3.jpg" />
+        <marquee direction="left" truespeed loop="-1" scrolldelay="0" onmouseover="this.stop();" onmouseout="this.start();">
+            <asp:Image runat="server" Width="1400" ImageUrl="~/Source/supermarket/supermarket1.jpg" />
+            <asp:Image runat="server" Width="1400" ImageUrl="~/Source/supermarket/supermarket2.jpg" />
+            <asp:Image runat="server" Width="1400" ImageUrl="~/Source/supermarket/supermarket3.jpg" />
         </marquee>
     </div>
 </body>
