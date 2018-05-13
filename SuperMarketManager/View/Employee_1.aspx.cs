@@ -254,44 +254,9 @@ namespace SuperMarketManager.View
             add_employee(emp_list);
         }
 
-        protected void emp_all_Click(object sender, EventArgs e)
+        protected void emp_add_Click(object sender, EventArgs e)
         {
-            List<Model.Employee> emp_list = empService.GetEmployeeByPartId(ConstantValue.ALL_PART);
-            add_employee(emp_list);
-            this.hide_part.Value = "5";
-        }
 
-        protected void emp_finacial_Click(object sender, EventArgs e)
-        {
-            List<Model.Employee> emp_list = empService.GetEmployeeByPartId(ConstantValue.FINANCE);
-            add_employee(emp_list);
-            this.hide_part.Value = "1";
-        }
-
-        protected void emp_purches_Click(object sender, EventArgs e)
-        {
-            List<Model.Employee> emp_list = empService.GetEmployeeByPartId(ConstantValue.PURCHASE);
-            add_employee(emp_list);
-            this.hide_part.Value = "2";
-        }
-
-        protected void emp_service_Click(object sender, EventArgs e)
-        {
-            List<Model.Employee> emp_list = empService.GetEmployeeByPartId(ConstantValue.SERVICE);
-            add_employee(emp_list);
-            this.hide_part.Value = "3";
-        }
-
-        protected void emp_rear_Click(object sender, EventArgs e)
-        {
-            List<Model.Employee> emp_list = empService.GetEmployeeByPartId(ConstantValue.LOGISTICS);
-            add_employee(emp_list);
-            this.hide_part.Value = "4";
-        }
-
-        protected void emp_back_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("home.aspx");
         }
     }
 }

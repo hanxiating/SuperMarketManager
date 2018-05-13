@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Buy.aspx.cs" Inherits="SuperMarketManager.View.WebForm5" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Buy.aspx.cs" Inherits="SuperMarketManager.View.Buy" %>
 
 <!DOCTYPE html>
 

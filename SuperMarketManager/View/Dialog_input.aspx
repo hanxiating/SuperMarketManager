@@ -13,8 +13,13 @@
             <table style="width:100%;">
                 <tr>
                     <td>
-                        <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
-                            <asp:ListItem></asp:ListItem>
+                        &nbsp;</td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <asp:DropDownList ID="DropDownList1" runat="server"  Height="16px">
+                            <asp:ListItem>请选择供应商</asp:ListItem>
                         </asp:DropDownList>
                     </td>
                    
