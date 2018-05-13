@@ -238,6 +238,11 @@ namespace SuperMarketManager.View
         {
             //search_text.Text;
         }
+
+        protected void emp_add_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     

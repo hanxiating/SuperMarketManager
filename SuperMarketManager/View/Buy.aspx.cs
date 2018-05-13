@@ -21,7 +21,7 @@ namespace SuperMarketManager.View
 
         protected void Button19_Click1(object sender, EventArgs e)
         {
-
+            Response.Write("<script language='javascript'>window.open('" + "Dialog_order.aspx" + "','','height=400,width=430, resizable=1,scrollbars=0,status=1,menubar=no,toolbar=no,location=yes,menu=no,left=" + Button19.Style["left"] + " , top=" + Button19.Style["top"] + "');</script>");
         }
     }
 }
