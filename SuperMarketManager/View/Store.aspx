@@ -53,11 +53,11 @@
 
         <div id="menu" style="margin-left:15px;margin-top:75px;border-right:groove;" class="auto-style1">
             <asp:Button ID="store_food" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="食品" OnClick="store_food_Click"></asp:Button>
-            <asp:Button ID="store_fruit" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="水果"></asp:Button>
-            <asp:Button ID="store_daliy" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="日用品"></asp:Button>
-            <asp:Button ID="store_drink" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="饮料"></asp:Button>
-            <asp:Button ID="store_staionery" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="文具"></asp:Button>
-            <asp:Button ID="store_else" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="其他"></asp:Button>
+            <asp:Button ID="store_fruit" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="水果" OnClick="store_fruit_Click"></asp:Button>
+            <asp:Button ID="store_daliy" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="日用品" OnClick="store_daliy_Click"></asp:Button>
+            <asp:Button ID="store_drink" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="饮料" OnClick="store_drink_Click"></asp:Button>
+            <asp:Button ID="store_staionery" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="文具" OnClick="store_staionery_Click"></asp:Button>
+            <asp:Button ID="store_else" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="其他" OnClick="store_else_Click"></asp:Button>
             <asp:Button ID="store_back" runat="server" class="btn btn-default btn-size" style="font-size:16px" Text="返回"></asp:Button>
         </div>
 
@@ -65,7 +65,7 @@
             <div style="text-align:left;margin-top:15px;margin-left:70px;">
                 <asp:TextBox ID="search_text" runat="server" style="width:200px;height:30px;"></asp:TextBox>
 
-                <asp:Button ID="search_btn" runat="server" style="height:30px;width:50px;font-size:14px;" Text="搜索"/>
+                <asp:Button ID="search_btn" runat="server" style="height:30px;width:50px;font-size:14px;" Text="搜索" OnClick="search_btn_Click"/>
                 <asp:Button ID="object_add" runat="server" Text="增加物品" class="btn_update" OnClick="object_add_Click" Width="59px"/>
                 <asp:Button ID="store_add" runat="server" Text="进货" class="btn_update" OnClick="store_add_Click"/>
 

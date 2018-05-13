@@ -90,6 +90,7 @@ namespace SuperMarketManager.View
 
         protected void search_btn_Click(object sender, EventArgs e)
         {
+            
             if (DropDownList1.SelectedIndex == 0)
             {
                 AddSupplierToTable(new SupplierService().GetAllSupplier());

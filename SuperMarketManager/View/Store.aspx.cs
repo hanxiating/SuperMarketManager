@@ -18,11 +18,17 @@ namespace SuperMarketManager.View
 
         }
 
+
+
         protected void store_food_Click(object sender, EventArgs e)
         {
-            List<Model.Goods> goods_list = goodsService.GetGoodsByTypeId(ConstantValue.FOOD);
+            ShowData(ConstantValue.FOOD);
+        }
+
+        private void ShowData(int type) {
+            List<Model.Goods> goods_list = goodsService.GetGoodsByTypeId(type);
             add_goods(goods_list);
-            this.hide_goodsType.Value = "0";
+            this.hide_goodsType.Value = ""+type;
         }
 
         protected void store_add_Click(object sender, EventArgs e)
@@ -38,6 +44,9 @@ namespace SuperMarketManager.View
 
         public void add_goods(List<Model.Goods> goods)
         {
+            if (null == goods) {
+                return;
+            }
             int count = goods.Count;
             TableRow row;
             TableCell cell;
@@ -106,5 +115,36 @@ namespace SuperMarketManager.View
                 storeInfo.Rows.Add(row);
             }
         }
+
+        protected void search_btn_Click(object sender, EventArgs e)
+        {
+            add_goods(goodsService.SearchGoods(Convert.ToInt32(this.hide_goodsType.Value),search_text.Text));
+        }
+
+        protected void store_fruit_Click(object sender, EventArgs e)
+        {
+            ShowData(ConstantValue.FRUIT);
+        }
+
+        protected void store_daliy_Click(object sender, EventArgs e)
+        {
+            ShowData(ConstantValue.DAILYUSE);
+        }
+
+        protected void store_drink_Click(object sender, EventArgs e)
+        {
+            ShowData(ConstantValue.DRINK);
+        }
+
+        protected void store_staionery_Click(object sender, EventArgs e)
+        {
+            ShowData(ConstantValue.STATIONARY);
+        }
+
+        protected void store_else_Click(object sender, EventArgs e)
+        {
+            ShowData(ConstantValue.OTHERS);
+        }
+
     }
 }

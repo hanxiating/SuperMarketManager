@@ -48,7 +48,7 @@
         <div id="content" style="width:80%;height:600px;float:left;margin-left:20px;margin-top:70px;">
             <div style="text-align:left;margin-top:15px;margin-left:70px;">
                 <asp:DropDownList ID="DropDownList1" runat="server">
-                    <asp:ListItem Value="0">请选择供应商品种类</asp:ListItem>
+                    <asp:ListItem Value="-1">请选择供应商品种类</asp:ListItem>
                     <asp:ListItem Value="0">食品</asp:ListItem>
                     <asp:ListItem Value="1">水果</asp:ListItem>
                     <asp:ListItem Value="2">日用品</asp:ListItem>
