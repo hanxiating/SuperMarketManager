@@ -20,6 +20,9 @@ namespace SuperMarketManager.View
 
         public void add_employee(List<Model.Employee> emp)
         {
+            if (null == emp) {
+                return;
+            }
             int count = emp.Count;
             TableRow row;
             TableCell cell;

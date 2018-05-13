@@ -54,7 +54,7 @@ namespace SuperMarketManager.View
         private TableHeaderRow CreateHeader()
         {
             TableHeaderRow tableHeaderRow = new TableHeaderRow();
-            tableHeaderRow.CssClass= "table-bordered td text-center";
+            tableHeaderRow.CssClass= "header-font asp-table-header";
             TableHeaderCell tableHeaderCell = new TableHeaderCell();
             tableHeaderCell.Text = "供应商名称";
             tableHeaderCell.CssClass = "table-bordered td text-center";

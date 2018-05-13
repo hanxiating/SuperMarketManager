@@ -60,7 +60,7 @@ namespace SuperMarketManager.View
                     goodsSupplierService.AddGoodsSupplier(4,s);
                 if (others.Checked == true)
                     goodsSupplierService.AddGoodsSupplier(5,s);*/
-                Response.Write("添加成功！");
+                Response.Write("<script>alert('添加成功')</script>");
             }
 
         }

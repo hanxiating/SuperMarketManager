@@ -33,8 +33,8 @@ namespace SuperMarketManager.View
             else
             {
                 employeeService.AddEmployee(TextBox2.Text, TextBox4.Text, int.Parse(Sex.SelectedItem.Value), int.Parse(DropDownList1.SelectedValue.ToString()));
-                Response.Write("添加成功！");
-                ClientScript.RegisterStartupScript(Page.GetType(), "", "<script language=javascript>window.opener=null;window.open('','_self');window.close();</script>");
+                Response.Write("<script>alert('添加成功')</script>");
+
             }
         }
 

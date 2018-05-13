@@ -23,7 +23,7 @@ namespace SuperMarketManager.View
             else
             {
                 goodsService.AddGoods(TextBox1.Text, int.Parse(DropDownList1.SelectedItem.Value),int.Parse(TextBox3.Text),int.Parse(TextBox4.Text),float.Parse(TextBox5.Text),int.Parse(TextBox6.Text),1);
-                Response.Write("添加成功！");
+                Response.Write("<script>alert('添加成功')</script>");
             }
         }
 

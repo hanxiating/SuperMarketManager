@@ -55,7 +55,7 @@
             <div style="text-align:left;margin-top:15px;margin-left:70px;">
                 <asp:TextBox ID="search_text" runat="server" style="width:200px;height:30px;"></asp:TextBox>
 
-                <asp:Button ID="search_btn" runat="server" style="height:30px;width:50px;font-size:14px;" Text="搜索"/>
+                <asp:Button ID="search_btn" runat="server" style="height:30px;width:50px;font-size:14px;" Text="搜索" OnClick="search_btn_Click"/>
 
 
             </div><br />
@@ -69,13 +69,6 @@
                     <asp:TableHeaderCell CssClass="table-bordered td text-center">销售时间</asp:TableHeaderCell>
                     <asp:TableHeaderCell CssClass="table-bordered td text-center">数量</asp:TableHeaderCell>
                 </asp:TableHeaderRow>
-                <asp:TableRow CssClass="asp-table-normal">
-                     <asp:TableCell CssClass="table-bordered td text-center">123456</asp:TableCell>
-                     <asp:TableCell CssClass="table-bordered td text-center">123456</asp:TableCell>
-                     <asp:TableCell CssClass="table-bordered td text-center">123456</asp:TableCell>
-                     <asp:TableCell CssClass="table-bordered td text-center">123456</asp:TableCell>
-                     <asp:TableCell CssClass="table-bordered td text-center">123456</asp:TableCell>
-                </asp:TableRow>
             </asp:Table>
 
         </div>
