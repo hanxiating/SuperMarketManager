@@ -30,7 +30,7 @@ img {
 
 .hl_main5_content {
     width: 1300px;
-    height: 800px;
+    height: 50px;
     border-top: none;
     margin-left: 1px;
     margin: 100px auto;
@@ -64,17 +64,19 @@ img {
 .hl_scrool_leftbtn {
     width: 14px;
     height: 38px;
-    background: #ccc url(hl_scroll_left.jpg) no-repeat;
+    background: #eee url(hl_scroll_left.jpg) no-repeat;
     float: left;
     margin-top: 50px;
     cursor: pointer;
+    border-radius: 20px;
 }
 
 .hl_scrool_rightbtn {
     width: 14px;
     height: 38px;
-    background: #ccc url(hl_scroll_right.jpg) no-repeat;
+    background: #eee url(hl_scroll_right.jpg) no-repeat;
     float: right;
     margin-top: 50px;
     cursor: pointer;
+    border-radius:20px;
 }

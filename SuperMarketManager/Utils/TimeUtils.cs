@@ -24,5 +24,9 @@ namespace SuperMarketManager.Utils
             DateTime newTime = dtStart.AddSeconds(unix);
             return newTime;
         }
+        public static String GetTimeString(long unix)
+        {
+            return GetUnixDateTime(unix).ToString("f");
+        }
     }
 }

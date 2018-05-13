@@ -4,13 +4,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>员工管理</title>
+    <title>供应商管理</title>
 
     <link href="../Content/view.css" type="text/css" rel="stylesheet"/>
     <link href="../Content/bootstrap.css" type="text/css" rel="stylesheet"/>
     <link href="../Content/bootstrap.min.css" type="text/css" rel="stylesheet"/>
     <link href="../Content/Site.css" type="text/css" rel="stylesheet"/>
-    <link href="../mmk_media/image/supermarket.png" type="text/css" rel="stylesheet"/>
+     <link href="../mmk_media/image/supermarket.png" type="text/css" rel="stylesheet"/>
 
     <style type="text/css">
         .auto-style2 {
@@ -32,15 +32,15 @@
         <div >
             <div class="nav navbar-inverse navbar-fixed-top">
                 <div class="market-title">
-                    <asp:Image runat="server" Height="71px" ImageUrl="~/mmk_media/image/market_3.png" Width="493px" />
+                    <asp:Image runat="server" Height="71px" ImageUrl="~/Source/market_3.png" Width="493px" />
                 </div>
                  <ul>
-                   <li><a href="Home.aspx">首页</a></li>
-                   <li><a href="Employee.aspx">员工管理</a></li>
+                    <li><a href="home.aspx">首页</a></li>
+                   <li><a href="Employee_1.aspx">员工管理</a></li>
                    <li><a href="Supply.aspx">供应商管理</a></li>
                    <li><a href="Store.aspx">库存管理</a></li>
                    <li><a href="Sale.aspx">销售记录</a></li>
-                     <li><a href="login.aspx">退出</a></li>
+                   <li><a href="login.aspx">退出</a></li>
                  </ul>
             </div>
         </div>

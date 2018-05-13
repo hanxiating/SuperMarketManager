@@ -23,19 +23,19 @@
                     <asp:Image runat="server" Height="71px" ImageUrl="~/Source/market_3.png" Width="493px" />
                 </div>
                 <ul>
-                    <li><a href="Home.aspx">首页</a></li>
-                    <li><a href="Employee_1.aspx">员工管理</a></li>
-                    <li><a href="Supply.aspx">供应商管理</a></li>
-                    <li><a href="Store.aspx">库存管理</a></li>
-                    <li><a href="Sale.aspx">销售记录</a></li>
-                    <li><a href="login.aspx">退出</a></li>
+                   <li><a href="home.aspx">首页</a></li>
+                   <li><a href="Employee_1.aspx">员工管理</a></li>
+                   <li><a href="Supply.aspx">供应商管理</a></li>
+                   <li><a href="Store.aspx">库存管理</a></li>
+                   <li><a href="Sale.aspx">销售记录</a></li>
+                   <li><a href="login.aspx">退出</a></li>
                 </ul>
             </div>
         </div>
     </form>
     <div class="hl_main5_content">
-        <div class="hl_scrool_leftbtn"><</div>
-        <div class="hl_scrool_rightbtn">></div>
+        <div class="hl_scrool_leftbtn"><label style="margin-top:10px;margin-left:2px;"><</label></div>
+        <div class="hl_scrool_rightbtn"><label style="margin-top:10px;margin-left:2px;">></label></div>
         <div class="hl_main5_content1">
             <ul>
                 <li><img alt="supermarket" src="../Source/supermarket/supermarket1.jpg" /></li>
@@ -46,6 +46,20 @@
                 <li><img alt="supermarket" src="../Source/supermarket/supermarket6.jpg" /></li>
                 <li><img alt="supermarket" src="../Source/supermarket/supermarket7.jpg" /></li>
             </ul>
+        </div>
+    </div>
+    <hr />
+    <div style="text-align:center;">
+        <label style="text-align:center;font-size:22px;font-family:Tahoma;font-weight:lighter;">超市在线管理软件，给你简单操作！</label>
+    </div>
+    <hr />
+        <div style="margin-left:30px;display:inline-block;">
+            <img src="../Source/home/home1.jpg" style="width:400px;"></img>
+        <div style="margin-left:15px;display:inline-block;">
+            <img src="../Source/home/home2.jpg" style="width:400px;"></img>
+        </div>
+        <div style="margin-left:15px;display:inline-block;">
+            <img src="../Source/home/home3.jpg" style="width:400px;"></img>
         </div>
     </div>
     <script type="text/javascript" src="http://jt.875.cn/js/jquery.js"> </script>

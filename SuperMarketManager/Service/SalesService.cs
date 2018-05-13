@@ -12,9 +12,9 @@ namespace SuperMarketManager.Service
     {
         private const String INSERT_SALES_SQL = "insert into sales(goods_id,number,cost,time) values({0},{1},{2},{3})";
         private const String SELECT_ALL_SALES = "select * from sales group by time";
-
+        private const String SELECT_GOODS_HISTORY = "select * from sales where goods_id={0}";
         //查询全部销售记录（同一时间一组）
-        public List<Sales> GetAllPart()
+        public List<Sales> GetAllSales()
         {
             List<Dictionary<String, Object>> sqlResult = DatabaseTool.ExecSqlWithReturn(String.Format(SELECT_ALL_SALES));
             if (null == sqlResult || sqlResult.Count < 1)
@@ -45,6 +45,24 @@ namespace SuperMarketManager.Service
                     }
             }
             return result;
+        }
+
+        public List<Sales> GetGoodsHistory(int goods_id)
+        {
+            List<Dictionary<String, Object>> sqlResult = DatabaseTool.ExecSqlWithReturn(String.Format(SELECT_GOODS_HISTORY,goods_id));
+            if (null == sqlResult || sqlResult.Count < 1)
+            {
+                return null;
+            }
+            else
+            {
+                List<Sales> sales = new List<Sales>();
+                foreach (Dictionary<String, Object> dic in sqlResult)
+                {
+                    sales.Add(Sales.CreateSale(dic));
+                }
+                return sales;
+            }
         }
 
         //插入销售记录
