@@ -21,6 +21,7 @@
                         <asp:DropDownList ID="DropDownList1" runat="server"  Height="16px">
                             <asp:ListItem>请选择供应商</asp:ListItem>
                         </asp:DropDownList>
+                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                     </td>
                    
                 </tr>

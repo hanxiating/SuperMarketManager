@@ -93,7 +93,7 @@
                 <asp:Button ID="search_btn" runat="server" style="height:30px;width:50px;font-size:14px;" Text="搜索" OnClick="search_btn_Click" />
                 
                 <asp:Button ID="emp_add" runat="server" Text="添加员工" style="height:30px;width:90px;margin-right:10px;margin-left:500px;" OnClick="emp_add_Click"/>
-                <asp:Button ID="emp_update" runat="server" Text="修改" style="height:30px;width:50px;" />
+                <asp:Button ID="emp_update" runat="server" Text="修改" style="height:30px;width:50px;" OnClick="emp_update_Click" />
                 <asp:Button ID="emp_delete" runat="server" Text="删除" class="btn_delete" OnClick="emp_delete_Click"/>
 
             </div><br />
