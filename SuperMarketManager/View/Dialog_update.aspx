@@ -58,10 +58,10 @@
                 </tr>
                 <tr>
                     <td class="auto-style1">
-                        <asp:Button ID="Button1" runat="server" Text="确认修改" OnClick="Button1_Click" />
+                        <asp:Button ID="Button1" runat="server" Text="确认修改" OnClick="Button1_Click" style="height: 21px" />
                     </td>
                     <td>
-                        <asp:Button ID="Button2" runat="server" Text="取消" Width="79px" />
+                        <asp:Button ID="Button2" runat="server" Text="取消" Width="79px" OnClick="Button2_Click" />
                     </td>
                     
                 </tr>
