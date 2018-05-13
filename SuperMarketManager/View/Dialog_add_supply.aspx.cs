@@ -11,6 +11,7 @@ namespace SuperMarketManager.View
     public partial class WebForm2 : System.Web.UI.Page
     {
         SupplierService supplierService = new SupplierService();
+        GoodsSupplierService goodsSupplierService = new GoodsSupplierService();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -23,8 +24,20 @@ namespace SuperMarketManager.View
             else
             {
                 supplierService.AddSupplier(TextBox2.Text,TextBox5.Text,TextBox4.Text,TextBox6.Text);
-                Response.Write("添加成功！");
             }
+            /*if (food.Checked == true) 
+                goodsSupplierService.AddGoodsSupplier(0,);//第二个参数为本供应商的ID，下同
+            if (fruit.Checked == true)
+                goodsSupplierService.AddGoodsSupplier(1,);
+            if (daily.Checked == true)
+                goodsSupplierService.AddGoodsSupplier(2,);
+            if (drink.Checked == true)
+                goodsSupplierService.AddGoodsSupplier(3,);
+            if (pen.Checked == true)
+                goodsSupplierService.AddGoodsSupplier(4,);
+            if (others.Checked == true)
+                goodsSupplierService.AddGoodsSupplier(5,);
+            Response.Write("添加成功！");*/
 
         }
     }
