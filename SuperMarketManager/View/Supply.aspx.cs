@@ -15,7 +15,8 @@ namespace SuperMarketManager.View
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           // new GoodsService().AddGoods("水果",0,15,3,1,5,1);
+          //  new GoodsSupplierService().AddGoodsSupplier(2,1);
         }
 
         protected override void OnInit(EventArgs e)
@@ -33,6 +34,11 @@ namespace SuperMarketManager.View
         {
             TableRow row;
             supplyTable.Rows.Clear();
+            supplyTable.Rows.Add(CreateHeader());
+            if (null == suppliers)
+            {
+                return;
+            }
             foreach (Supplier supplier in suppliers)
             {
                 row = new TableRow();
@@ -43,6 +49,33 @@ namespace SuperMarketManager.View
                 supplyTable.Rows.Add(row);
             }
 
+        }
+
+        private TableHeaderRow CreateHeader()
+        {
+            TableHeaderRow tableHeaderRow = new TableHeaderRow();
+            tableHeaderRow.CssClass= "table-bordered td text-center";
+            TableHeaderCell tableHeaderCell = new TableHeaderCell();
+            tableHeaderCell.Text = "供应商名称";
+            tableHeaderCell.CssClass = "table-bordered td text-center";
+            tableHeaderRow.Controls.Add(tableHeaderCell);
+
+            tableHeaderCell = new TableHeaderCell();
+            tableHeaderCell.Text = "地址";
+            tableHeaderCell.CssClass = "table-bordered td text-center";
+            tableHeaderRow.Controls.Add(tableHeaderCell);
+
+            tableHeaderCell = new TableHeaderCell();
+            tableHeaderCell.Text = "联系方式";
+            tableHeaderCell.CssClass = "table-bordered td text-center";
+            tableHeaderRow.Controls.Add(tableHeaderCell);
+
+            tableHeaderCell = new TableHeaderCell();
+            tableHeaderCell.CssClass = "table-bordered td text-center";
+            tableHeaderCell.Text = "备注";
+            tableHeaderRow.Controls.Add(tableHeaderCell);
+
+            return tableHeaderRow;
         }
 
         private TableCell CreateCell(String data)
@@ -57,6 +90,7 @@ namespace SuperMarketManager.View
 
         protected void search_btn_Click(object sender, EventArgs e)
         {
+            
             if (DropDownList1.SelectedIndex == 0)
             {
                 AddSupplierToTable(new SupplierService().GetAllSupplier());
@@ -65,7 +99,7 @@ namespace SuperMarketManager.View
             {
                 AddSupplierToTable(new SupplierService().GetSuppliersForGoodsType(Convert.ToInt32(DropDownList1.SelectedValue)));
             }
-            
+
         }
     }
 }

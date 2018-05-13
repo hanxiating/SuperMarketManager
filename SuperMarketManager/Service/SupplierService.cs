@@ -9,7 +9,7 @@ namespace SuperMarketManager.Service
 {
     public class SupplierService
     {
-        private const String INSERT_SUPPLIER_SQL = "insert into supplier(name,phone,address,remark) values(\"{0}\",\"{1}\",\"{2}\",\"{3}\"";
+        private const String INSERT_SUPPLIER_SQL = "insert into supplier(name,phone,address,remark) values(\"{0}\",\"{1}\",\"{2}\",\"{3}\")";
         private const String SELECT_SUPPLIER_BY_ID = "select * from supplier where id={0}";
         private const String SELECT_ALL_SUPPLIER = "select * from supplier";
 
