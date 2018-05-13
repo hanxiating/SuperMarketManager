@@ -32,6 +32,18 @@ namespace SuperMarketManager.Service
             }
         }
 
+        public bool AddParchase(List<Purchase> purchases)
+        {
+            long time= TimeUtils.GetCurrentTimeUnix();
+            bool result = false;
+            foreach (Purchase purchase in purchases) {
+                if (new GoodsService().PurchaseGoods(new GoodsSupplierService().GetGoodsSupplierById(purchase.GoodsSupplierId).GoodsId, purchase.Number))
+                    result= DatabaseTool.ExecSql(String.Format(INSERT_PURCHASE_SQL, purchase.GoodsSupplierId, purchase.Number, time));
+
+            }
+            return result;
+        }
+
         //添加采购记录
         public bool AddSales(int goods_supplier_id, int number)
         {

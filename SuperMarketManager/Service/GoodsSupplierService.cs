@@ -49,7 +49,6 @@ namespace SuperMarketManager.Service
             }
             else
             {
-
                 return GoodsSupplier.CreateGoodsSupplier(sqlResult[0]);
             }
         }

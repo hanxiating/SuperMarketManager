@@ -21,12 +21,12 @@ namespace SuperMarketManager.Service
 
         private const String SEARCH_GOODS_BYNAME = "select * from goods where type={0} and name=\"{1}\"";
 
-        
 
         public int AddGoods(Goods goods)
         {
             return AddGoods(goods.Name, goods.Type, goods.Number, goods.Price, goods.Discount, goods.LimitNumber, goods.Status);
         }
+
 
         public int AddGoods(String name, int type, int number, float price, float discount, int limitNumber, int status)
         {
