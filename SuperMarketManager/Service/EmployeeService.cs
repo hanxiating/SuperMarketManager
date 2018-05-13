@@ -13,6 +13,8 @@ namespace SuperMarketManager.Service
         private const String SELECT_EMPLOYEE_BY_PART = "select * from employee where part_id={0}";
         private const String SELECT_EMPLOYEE_BY_ID = "select * from employee where id={0}";
         private const String SELECT_EMPLOYEE_BY_PART_NAME = "select * from employee where part_id={0} and name=\"{1}\"";
+        private const String UPDATE_EMPLOYEE_SQL = "update employee set name=\"{0}\",phone=\"{1}\",part_id={2} where id={3}";
+
 
         private const String DELETE_EMPLOYEE_BY_ID = "delete from employee where id={0}";
         public bool AddEmployee(Employee employee)
@@ -23,6 +25,11 @@ namespace SuperMarketManager.Service
         {
             return DatabaseTool.ExecSql(String.Format(INSERT_EMPLOYEE_SQL, name, phone, sex, partId, TimeUtils.GetCurrentTimeUnix()));
         }
+
+        public bool UpdateEmployee(Employee employee) {
+            return DatabaseTool.ExecSql(String.Format(UPDATE_EMPLOYEE_SQL,employee.Name,employee.Phone,employee.PartId,employee.Id));
+        }
+
         //根据ID删除
         public bool DeleteEmployee(int id)
         {
