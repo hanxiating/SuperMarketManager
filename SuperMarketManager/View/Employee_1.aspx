@@ -114,6 +114,7 @@
                  </ContentTemplate>  
                 <Triggers>  
                     <asp:AsyncPostBackTrigger ControlID="emp_delete" EventName="Click" />  
+                    <asp:AsyncPostBackTrigger ControlID="search_btn" EventName="Click" />
                 </Triggers> 
             </asp:UpdatePanel>  
         </div>
