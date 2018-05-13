@@ -10,7 +10,7 @@
 namespace SuperMarketManager.View {
     
     
-    public partial class Store {
+    public partial class Orders {
         
         /// <summary>
         /// form1 控件。
@@ -22,129 +22,138 @@ namespace SuperMarketManager.View {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// store_food 控件。
+        /// client_all 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button store_food;
+        protected global::System.Web.UI.WebControls.Button client_all;
         
         /// <summary>
-        /// store_fruit 控件。
+        /// client_food 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button store_fruit;
+        protected global::System.Web.UI.WebControls.Button client_food;
         
         /// <summary>
-        /// store_daliy 控件。
+        /// client_fruit 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button store_daliy;
+        protected global::System.Web.UI.WebControls.Button client_fruit;
         
         /// <summary>
-        /// store_drink 控件。
+        /// client_use 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button store_drink;
+        protected global::System.Web.UI.WebControls.Button client_use;
         
         /// <summary>
-        /// store_staionery 控件。
+        /// client_drink 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button store_staionery;
+        protected global::System.Web.UI.WebControls.Button client_drink;
         
         /// <summary>
-        /// store_else 控件。
+        /// client_wenju 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button store_else;
+        protected global::System.Web.UI.WebControls.Button client_wenju;
         
         /// <summary>
-        /// store_back 控件。
+        /// client_other 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button store_back;
+        protected global::System.Web.UI.WebControls.Button client_other;
         
         /// <summary>
-        /// search_text 控件。
+        /// order 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox search_text;
+        protected global::System.Web.UI.WebControls.Button order;
         
         /// <summary>
-        /// search_btn 控件。
+        /// ScriptManager1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button search_btn;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// object_add 控件。
+        /// UpdatePanel1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button object_add;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// store_add 控件。
+        /// orderInfo 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button store_add;
+        protected global::System.Web.UI.WebControls.Table orderInfo;
         
         /// <summary>
-        /// storeInfo 控件。
+        /// hide_id 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table storeInfo;
+        protected global::System.Web.UI.WebControls.HiddenField hide_id;
         
         /// <summary>
-        /// hide_goodsId 控件。
+        /// hide_price 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hide_goodsId;
+        protected global::System.Web.UI.WebControls.HiddenField hide_price;
         
         /// <summary>
-        /// hide_goodsType 控件。
+        /// hide_number 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hide_goodsType;
+        protected global::System.Web.UI.WebControls.HiddenField hide_number;
+        
+        /// <summary>
+        /// hide_type 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hide_type;
     }
 }

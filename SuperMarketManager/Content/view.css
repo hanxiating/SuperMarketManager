@@ -1,6 +1,4 @@
-﻿.body{
-
-}
+﻿
 
 .div{
     display:inline-block;
@@ -20,44 +18,7 @@
     padding-left: 10px;
     text-align:center;
 }
-.t1 {
-    margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 5px;
-    background-color: #FFF;
-    background:#EEF4F9;
-    border:solid;
-    border:1;
-    color:#003755;
-    border-collapse: collapse;
-    font: 14px "宋体";
-}
 
-table.t1 tr {
-        background: #7CB8E2;
-        color: #fff;
-        padding: 6px 4px;
-        text-align: center;
-}
-table.t1 td {
-        background: #C7DDEE none repeat-x scroll center left;
-        color: #000;
-        padding: 4px 2px;
-}
-
-table.t1 a {
-        text-decoration: none;
-        height: 1em;
-}
-
-table.t1 a:link, table.t1 a:visited {
-            color: #3366CC;
-}
-table.t1 a:hover { /* 鼠标经过时 */
-            color: #B50000;
-            text-decoration: underline;
-}  
 
 .title_font{
     font-size:px;
@@ -115,9 +76,7 @@ der-font{
     height:100px;
     width:200px;
 }
-.nav{
-    
-}
+
 .nav ul {
     width: 980px;
     margin: 0px;
@@ -150,8 +109,7 @@ der-font{
                 background: black;
             }
 
-.nav_2 {
-}
+
 
     .nav_2 ul {
         width: 980px;
@@ -209,7 +167,7 @@ der-font{
     height:30px;
 }
 .btn_update {
-    margin-left:600px;
+    margin-left:400px;
     height: 30px;
     width: 50px;
 }
@@ -218,9 +176,7 @@ der-font{
     height: 30px;
     width: 50px;
 }
-.btn_search{
 
-}
 .left_menu{
     font-size:40px;
     background-color:lightgray;
