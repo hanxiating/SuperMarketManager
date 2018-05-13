@@ -23,7 +23,13 @@ namespace SuperMarketManager.View
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
+            /*employee = employeeService.GetEmployeeById();//传过来行获取的ID
+            employee.Name = TextBox1.Text;
+            employee.Phone = TextBox3.Text;
+            employee.Sex = int.Parse(Sex.SelectedItem.Value);
+            employee.PartId = int.Parse(DropDownList1.SelectedValue.ToString());
+            employeeService.UpdateEmployee(employee);
+            Response.Write("修改成功！");*/
         }
     }
 }

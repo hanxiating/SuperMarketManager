@@ -25,6 +25,7 @@ namespace SuperMarketManager.View
                 supplierService.AddSupplier(TextBox2.Text,TextBox5.Text,TextBox4.Text,TextBox6.Text);
                 Response.Write("添加成功！");
             }
+
         }
     }
 }

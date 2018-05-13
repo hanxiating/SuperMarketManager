@@ -358,6 +358,7 @@
     <Content Include="View\Dialog_input.aspx" />
     <Content Include="View\Buy.aspx" />
     <Content Include="View\Dialog_update.aspx" />
+    <Content Include="View\Dialog_add_supplygoods.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -512,6 +513,13 @@
     </Compile>
     <Compile Include="View\Dialog_update.aspx.designer.cs">
       <DependentUpon>Dialog_update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog_add_supplygoods.aspx.cs">
+      <DependentUpon>Dialog_add_supplygoods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Dialog_add_supplygoods.aspx.designer.cs">
+      <DependentUpon>Dialog_add_supplygoods.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
