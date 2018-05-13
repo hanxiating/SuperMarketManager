@@ -200,6 +200,7 @@ namespace SuperMarketManager.View
             //HiddenFieldMark.Value = "HR"; //做个标记表示点击了aButton
             List<Model.Employee> emp_list = empService.GetEmployeeByPartId(ConstantValue.HR);
             add_employee(emp_list);
+            this.hide_part.Value ="0";
         }
 
         protected void emp_delete_Click(object sender, EventArgs e)
@@ -220,14 +221,14 @@ namespace SuperMarketManager.View
             //根据button的选中状态记录ID和当前部门
             // int ID = int.Parse(lab_test.Text);
             int value = int.Parse(this.hide.Value);
-            int part=0;
-            string depart = this.hide_part.Value;
-            if (depart.Equals("人事部")) part = 0;
-            else if (depart.Equals("财务部")) part = 1;
-            else if (depart.Equals("采购部")) part = 2;
-            else if (depart.Equals("客服部")) part = 3;
-            else if (depart.Equals("后勤部")) part = 4;
-            else part = 5;
+            int part = int.Parse(this.hide_part.Value);
+            //string depart = this.hide_part.Value;
+            //if (depart.Equals("人事部")) part = 0;
+            // if (depart.Equals("财务部")) part = 1;
+           // else if (depart.Equals("采购部")) part = 2;
+           // else if (depart.Equals("客服部")) part = 3;
+           // else if (depart.Equals("后勤部")) part = 4;
+           // else part = 5;
             
             empService.DeleteEmployee(value);
             List<Model.Employee> emp_list = empService.GetEmployeeByPartId(part);
@@ -236,7 +237,21 @@ namespace SuperMarketManager.View
         //根据员工姓名或者ID搜索员工
         protected void search_btn_Click(object sender, EventArgs e)
         {
-            //search_text.Text;
+            string emp=search_text.Text.Trim();
+            List<Model.Employee> emp_list = new List<Model.Employee>();
+            int part = int.Parse(this.hide_part.Value);
+            //判断是否为纯数字
+            string pattern =@"^\d*$";
+            if (System.Text.RegularExpressions.Regex.IsMatch(emp,pattern))
+            {
+                int id = int.Parse(emp);
+                emp_list.Add(empService.GetEmployeeById(id));
+            }
+            else
+
+                emp_list = empService.GetEmployeeByPartName(part, emp);
+
+            add_employee(emp_list);
         }
     }
 }
