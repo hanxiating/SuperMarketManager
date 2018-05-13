@@ -477,6 +477,13 @@
     <Compile Include="View\Dialog_input.aspx.designer.cs">
       <DependentUpon>Dialog_input.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\Dialog_update.aspx.cs">
+      <DependentUpon>Dialog_update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Dialog_update.aspx.designer.cs">
+      <DependentUpon>Dialog_update.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Employee_1.aspx.cs">
       <DependentUpon>Employee_1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

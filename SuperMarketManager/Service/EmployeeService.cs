@@ -10,16 +10,13 @@ namespace SuperMarketManager.Service
     public class EmployeeService
     {
         private const String INSERT_EMPLOYEE_SQL = "insert into employee(name,phone,sex,part_id,time) values(\"{0}\",\"{1}\",{2},{3},{4})";
+        private const String SELECT_EMPLOEE_ALL = "select * from employee";
         private const String SELECT_EMPLOYEE_BY_PART = "select * from employee where part_id={0}";
         private const String SELECT_EMPLOYEE_BY_ID = "select * from employee where id={0}";
         private const String SELECT_EMPLOYEE_BY_PART_NAME = "select * from employee where part_id={0} and name=\"{1}\"";
         private const String UPDATE_EMPLOYEE_SQL = "update employee set name=\"{0}\",phone=\"{1}\",part_id={2} where id={3}";
-
-
         private const String DELETE_EMPLOYEE_BY_ID = "delete from employee where id={0}";
         //private const String SELECT_EMPLOYEE_BY_PART_NAME = "select * from employee where part_id={0} and name={1}";
-
-        private const String SELECT_ALL_EMPLOYEE = "select * from employee";
 
         public bool AddEmployee(Employee employee)
         {
@@ -40,9 +37,9 @@ namespace SuperMarketManager.Service
             return DatabaseTool.ExecSql(String.Format(DELETE_EMPLOYEE_BY_ID,id));
         }
 
-        public List<Employee> GetAllEmployees()
+        public List<Employee> GetEmployeeByPartId(int partId)
         {
-            List<Dictionary<String, Object>> result = DatabaseTool.ExecSqlWithReturn(SELECT_ALL_EMPLOYEE);
+            List<Dictionary<String, Object>> result = DatabaseTool.ExecSqlWithReturn(String.Format(SELECT_EMPLOYEE_BY_PART, partId));
             if (null == result || result.Count < 1)
             {
                 return null;
@@ -58,9 +55,9 @@ namespace SuperMarketManager.Service
             }
         }
 
-        public List<Employee> GetEmployeeByPartId(int partId)
+        public List<Employee> GetAllEmployee()
         {
-            List<Dictionary<String, Object>> result = DatabaseTool.ExecSqlWithReturn(String.Format(SELECT_EMPLOYEE_BY_PART, partId));
+            List<Dictionary<String, Object>> result = DatabaseTool.ExecSqlWithReturn(SELECT_EMPLOEE_ALL);
             if (null == result || result.Count < 1)
             {
                 return null;
