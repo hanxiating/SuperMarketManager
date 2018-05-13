@@ -43,37 +43,39 @@ namespace SuperMarketManager.Service
         public List<Employee> GetAllEmployees()
         {
             List<Dictionary<String, Object>> result = DatabaseTool.ExecSqlWithReturn(SELECT_ALL_EMPLOYEE);
+            List<Employee> employees = new List<Employee>();
             if (null == result || result.Count < 1)
             {
-                return null;
+                
             }
             else
             {
-                List<Employee> employees = new List<Employee>();
+
                 foreach (Dictionary<String, Object> dic in result)
                 {
                     employees.Add(Employee.CreateEmployee(dic));
                 }
-                return employees;
             }
+            return employees;
         }
 
         public List<Employee> GetEmployeeByPartId(int partId)
         {
             List<Dictionary<String, Object>> result = DatabaseTool.ExecSqlWithReturn(String.Format(SELECT_EMPLOYEE_BY_PART, partId));
+            List<Employee> employees = new List<Employee>();
             if (null == result || result.Count < 1)
             {
-                return null;
             }
             else
             {
-                List<Employee> employees = new List<Employee>();
+               
                 foreach (Dictionary<String, Object> dic in result)
                 {
                     employees.Add(Employee.CreateEmployee(dic));
                 }
                 return employees;
             }
+            return employees;
         }
 
         public Employee GetEmployeeById(int id)
@@ -92,19 +94,21 @@ namespace SuperMarketManager.Service
         public List<Employee> GetEmployeeByPartName(int partId, String name)
         {
             List<Dictionary<String, Object>> result = DatabaseTool.ExecSqlWithReturn(String.Format(SELECT_EMPLOYEE_BY_PART_NAME, partId,name));
+            List<Employee> employees = new List<Employee>();
             if (null == result || result.Count < 1)
             {
-                return null;
+                
             }
             else
             {
-                List<Employee> employees = new List<Employee>();
+                
                 foreach (Dictionary<String, Object> dic in result)
                 {
                     employees.Add(Employee.CreateEmployee(dic));
                 }
                 return employees;
             }
+            return employees;
         }
 
     }
