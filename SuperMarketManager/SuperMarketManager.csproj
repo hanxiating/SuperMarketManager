@@ -245,6 +245,7 @@
     <Content Include="Content\css\page3_layout.css" />
     <Content Include="Content\css\page5_layout.css" />
     <Content Include="Content\css\releaseorder_layout.css" />
+    <Content Include="Content\css\slider.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\view.css" />
     <Content Include="Default.aspx" />
@@ -345,6 +346,10 @@
     <Content Include="Source\supermarket\supermarket1.jpg" />
     <Content Include="Source\supermarket\supermarket2.jpg" />
     <Content Include="Source\supermarket\supermarket3.jpg" />
+    <Content Include="Source\supermarket\supermarket4.jpg" />
+    <Content Include="Source\supermarket\supermarket5.jpg" />
+    <Content Include="Source\supermarket\supermarket6.jpg" />
+    <Content Include="Source\supermarket\supermarket7.jpg" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="View\Dialog_order.aspx" />
     <Content Include="View\home.aspx" />
